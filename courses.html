@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Courses | Dravidian Campus</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar Container -->
+
+    <div id="navbar"
+        class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow mb-0 fixed top-0 z-50 w-full">
+
+        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto ">
+
+            <div class="flex items-center justify-between py-3">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+
+                    <img src="/public/logo.png" alt="Dravidian Campus Logo"
+                        class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
+
+                    <h3 class="font-bold text-sm md:text-lg lg:text-xl cursor-pointer">
+                        Dravidian Campus
+                    </h3>
+
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-4 lg:gap-8">
+
+                    <a href="/index.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Home
+                    </a>
+
+                    <a href="/courses.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Courses
+                    </a>
+
+                    <a href="/library.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Library
+                    </a>
+
+                    <a href="#" class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Contact
+                    </a>
+
+                    <button
+                        class="bg-[#251901] text-white px-4 py-2 rounded hover:bg-orange-400 transition duration-300 cursor-pointer">
+                        Join Now
+                    </button>
+
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="menuBtn" class="md:hidden text-3xl font-bold cursor-pointer">
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col border-t border-gray-300 bg-[#FAEED4]">
+
+            <a href="#" class="block p-4 hover:bg-gray-200">
+                Home
+            </a>
+
+            <a href="#" class="block p-4 hover:bg-gray-200">
+                Courses
+            </a>
+
+            <a href="#" class="block p-4 hover:bg-gray-200">
+                About
+            </a>
+
+            <a href="#" class="block p-4 hover:bg-gray-200">
+                Contact
+            </a>
+
+            <div class="p-4">
+                <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+                    Join Now
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navbar Ends here  -->
+
+
+    <!-- Hero -->
+    <section class="relative bg-[#FAEED4] overflow-hidden">
+
+        <div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-orange-300 blur-3xl opacity-60"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
+
+            <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-500 font-medium">
+                Our Programs
+            </span>
+
+            <h1 class="mt-6 text-4xl md:text-5xl font-bold">
+                Courses Designed For Success
+            </h1>
+
+            <p class="mt-6 max-w-3xl mx-auto text-gray-700 text-lg">
+                Whether you're preparing for board exams, competitive exams,
+                improving communication skills, or learning computers,
+                we have the right course for you.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+    <section class="py-20 bg-gray-100">
+
+        <!-- Heading -->
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-500 font-medium">
+                Our Courses
+            </span>
+
+            <h1 class="mt-5 text-4xl md:text-4xl font-bold">
+                Programs Designed For Every Learner
+            </h1>
+
+            <p class="mt-5 max-w-3xl mx-auto text-gray-600 text-lg">
+                Whether you're preparing for competitive examinations,
+                improving school performance, learning computer skills,
+                or developing communication abilities, Dravidian Campus
+                provides expert guidance at every step.
+            </p>
+
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+            <!-- Competitive Exams -->
+            <div
+                class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg hover:bg-orange-300/80 hover:backdrop-blur-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                <img src="public/competitive-exam.jpg" alt="Competitive Exams" class="w-full h-56 object-cover">
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Competitive Exam Preparation
+                    </h3>
+
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Comprehensive coaching for SSC, Banking,
+                        Railway, Defence, Police, and other
+                        government examinations.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Weekly Mock Tests</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Updated Study Material</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Doubt Clearing Sessions</li>
+                        <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Expert Mentorship</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Tuition -->
+            <div
+                class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg hover:bg-orange-300/80 hover:backdrop-blur-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                <img src="public/tuition.jpg" alt="Tuition Classes" class="w-full h-56 object-cover">
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Tuition Classes
+                    </h3>
+
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Personalized academic support for students
+                        from Class 6 to Class 12 with focus on
+                        concept clarity and strong fundamentals.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Mathematics</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Science</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> English</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Small Batch Sizes</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Board Exams -->
+            <div
+                class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg hover:bg-orange-300/80 hover:backdrop-blur-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                <img src="public/board-exam.jpg" alt="Board Exams" class="w-full h-56 object-cover">
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Board Exam Preparation
+                    </h3>
+
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Strategic preparation for Class 10 and
+                        Class 12 board examinations with regular
+                        testing and revision schedules.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> CBSE & State Boards</li>
+                        <li class="flex items-center gap-3 "><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Revision Plans</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Sample Papers</li>
+                        <li class=" flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Performance Analysis</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Computer Classes -->
+            <div
+                class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg hover:bg-orange-300/80 hover:backdrop-blur-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                <img src="public/computer-course.jpg" alt="Computer Classes" class="w-full h-56 object-cover">
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Computer Classes
+                    </h3>
+
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Practical computer education designed
+                        for students, job seekers, and beginners.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> MS Office</li>
+                        <li class=" flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Internet Skills</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Typing Practice</li>
+                        <li class=" flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Basic Programming</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- English Speaking -->
+            <div
+                class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg hover:bg-orange-300/80 hover:backdrop-blur-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                <img src="public/english-speaking.jpg" alt="English Speaking" class="w-full h-56 object-cover">
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        English Speaking
+                    </h3>
+
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Build confidence in communication through
+                        structured spoken English and personality
+                        development training.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Vocabulary Building</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Grammar Practice</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Group Discussions</li>
+                        <li class=" flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Interview Preparation</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Digital Library -->
+            <div
+                class="bg-gray-200 rounded-3xl overflow-hidden shadow-lg hover:bg-orange-300/80 hover:backdrop-blur-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                <img src="public/digital-library.jpg" alt="Digital Library" class="w-full h-56 object-cover">
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Digital Library
+                    </h3>
+
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        A peaceful and focused study environment
+                        equipped with modern facilities and
+                        learning resources.
+                    </p>
+
+                    <ul class="mt-5 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> High-Speed WiFi</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Quiet Study Zone</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Reference Books</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-green-600">
+                                check_circle
+                            </span> Extended Study Hours</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-[#FAEED4]">
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <h2 class="text-4xl font-bold">
+                Ready To Start Learning?
+            </h2>
+
+            <p class="mt-4 text-gray-700">
+                Join Dravidian Campus and take the next step toward
+                academic success and personal growth.
+            </p>
+
+            <button class="mt-8 bg-black text-white px-8 py-3 rounded-xl hover:bg-gray-800 transition">
+                Enroll Now
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#251901] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-16">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Brand -->
+                <div>
+
+                    <div class="flex items-center gap-3">
+
+                        <img src="public/logo.png" alt="Dravidian Campus Logo"
+                            class="w-12 h-12 rounded-full object-cover">
+
+                        <h3 class="text-2xl font-bold">
+                            Dravidian Campus
+                        </h3>
+
+                    </div>
+
+                    <p class="mt-5 text-gray-400 leading-relaxed">
+                        Empowering students through quality education,
+                        expert mentorship, and a focused learning
+                        environment.
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-5">
+                        Quick Links
+                    </h4>
+
+                    <ul class="space-y-3 text-gray-400">
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Courses
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Library
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Programs -->
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-5">
+                        Our Programs
+                    </h4>
+
+                    <ul class="space-y-3 text-gray-400">
+
+                        <li>Competitive Exams</li>
+
+                        <li>Tuition Classes</li>
+
+                        <li>Board Exam Preparation</li>
+
+                        <li>Computer Courses</li>
+
+                        <li>English Speaking</li>
+
+                        <li>Digital Library</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-5">
+                        Contact Information
+                    </h4>
+
+                    <div class="space-y-4 text-gray-400">
+
+                        <p>
+                            📞 +91 XXXXX XXXXX
+                        </p>
+
+                        <p>
+                            📧 info@dravidiancampus.com
+                        </p>
+
+                        <p>
+                            📍 Address
+                        </p>
+
+                        <p>
+                            🕒 Mon - Sat: 8 AM - 8 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                    <p class="text-gray-500 text-center md:text-left">
+                        © 2026 Dravidian Campus. All Rights Reserved.
+                    </p>
+
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-5 text-2xl">
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            📘
+                        </a>
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            📸
+                        </a>
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            ▶️
+                        </a>
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            💼
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
