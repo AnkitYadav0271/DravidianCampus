@@ -14,12 +14,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-console.log("user :", process.env.EMAIL);
-console.log("Password ;)", process.env.EMAIL_PASS);
-
 export const generateEnquiryEmail = async (args: EmailArgs) => {
   try {
-   const res =  transporter.sendMail({
+    const res = transporter.sendMail({
       sender: process.env.EMAIL,
       to: "dravidiancampus1@gmail.com",
       subject: `Query regarding Admission of ${args.fullName}`,
@@ -149,7 +146,6 @@ export const generateEnquiryEmail = async (args: EmailArgs) => {
 
 </div>
 `,
-
     });
 
     console.log(res);

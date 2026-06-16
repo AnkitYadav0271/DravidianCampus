@@ -1,0 +1,703 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar Container -->
+
+    <div id="navbar"
+        class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full mb-10">
+
+        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto ">
+
+            <div class="flex items-center justify-between py-3">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+
+                    <img src="/public/dravidian-campus-logo.png" alt="Dravidian Campus Logo"
+                        class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
+
+                    <h3 class="font-bold text-sm md:text-lg lg:text-xl cursor-pointer">
+                        Dravidian Campus
+                    </h3>
+
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-4 lg:gap-8">
+
+                    <a href="/index.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Home
+                    </a>
+
+                    <a href="/courses.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Courses
+                    </a>
+
+                    <a href="/library.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        Library
+                    </a>
+
+                    <a href="/computer-course.html"
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        computer Course
+                    </a>
+
+                    <button
+                        class="bg-[#251901] text-white px-4 py-2 rounded hover:bg-orange-400 transition duration-300 cursor-pointer">
+                        <a href="/join-now.html">Join Now</a>
+                    </button>
+
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="menuBtn" class="md:hidden text-3xl font-bold cursor-pointer">
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col border-t border-gray-300 bg-[#FAEED4]">
+
+            <a href="/" class="block p-4 hover:bg-orange-400">
+                Home
+            </a>
+
+            <a href="/courses.html" class="block p-4 hover:bg-orange-400">
+                Courses
+            </a>
+
+            <a href="/library.html" class="block p-4 hover:bg-orange-400">
+                Library
+            </a>
+
+            <a href="/computer-course.html" class="block p-4 hover:bg-orange-400">
+                Computer Course
+            </a>
+
+            <div class="p-4">
+                <button class="w-full bg-black text-white py-2 rounded hover:bg-emerald-600 transition">
+                    <a href="join-now.html">Join Now</a>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navbar Ends here  -->
+
+
+    <!-- Course Headline and Text goes here -->
+
+    <section class="pt-22">
+        <div
+            class="bg-orange-400/30 backdrop-blur-lg shadow-lg border border-white border-lg flex items-center justify-center flex-col min-h-[200px] rounded mx-auto max-w-[90%] p-4">
+            <h1 class="md:text-3xl lg:text-5xl text-xl font-bold">
+
+                Web development
+            </h1>
+
+            <p class="mt-4 text-center max-w-3xl text-gray-800 leading-relaxed">
+                Learn modern web development from the ground up. Master HTML, CSS,
+                JavaScript, responsive design, and real-world project development.
+            </p>
+        </div>
+    </section>
+
+    <!-- Course Headline and text ends here  -->
+
+
+    <!-- Course Details Section  -->
+
+    <section class="mt-12 max-w-[90%] mx-auto">
+
+        <div class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-10">
+
+            <!-- LEFT COLUMN -->
+            <div>
+
+                <!-- Course Banner -->
+                <img src="public/dravidian-campus-web-dev-course.jpeg" alt="Dravidian Campus Web Development Course"
+                    class="rounded-3xl h-[400px] w-full object-cover shadow-lg hero-image">
+
+                <div class="space-y-10 mt-10">
+
+                    <!-- Overview -->
+                    <section class="bg-white rounded-3xl p-8 shadow">
+
+                        <h2 class="text-3xl font-bold">
+                            Course Overview
+                        </h2>
+
+                        <p class="mt-5 text-gray-700 leading-relaxed">
+                            Web development is one of the most in-demand skills in today's digital world.
+                            This course teaches students how to create professional websites from scratch
+                            using modern technologies and industry best practices.
+                        </p>
+
+                        <p class="mt-4 text-gray-700 leading-relaxed">
+                            From building simple web pages to responsive and interactive websites,
+                            students gain practical experience through projects and real-world exercises.
+                        </p>
+
+                    </section>
+
+                    <!-- What You'll Learn -->
+                    <section class="bg-white rounded-3xl p-8 shadow">
+
+                        <h2 class="text-3xl font-bold">
+                            What You'll Learn
+                        </h2>
+
+                        <ul class="mt-6 space-y-4">
+
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-green-600">
+                                    check_circle
+                                </span>
+                                HTML5 Structure and Semantic Markup
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-green-600">
+                                    check_circle
+                                </span>
+                                Modern CSS and Responsive Design
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-green-600">
+                                    check_circle
+                                </span>
+                                JavaScript Fundamentals
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-green-600">
+                                    check_circle
+                                </span>
+                                DOM Manipulation and Events
+                            </li>
+
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-green-600">
+                                    check_circle
+                                </span>
+                                Building Real Projects
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                    <!-- Prerequisites -->
+                    <section class="bg-white rounded-3xl p-8 shadow">
+
+                        <h2 class="text-3xl font-bold">
+                            Prerequisites
+                        </h2>
+
+                        <ul class="mt-5 ml-6 space-y-2">
+
+                            <li class="list-disc">
+                                Basic computer knowledge
+                            </li>
+
+                            <li class="list-disc">
+                                No programming experience required
+                            </li>
+
+                            <li class="list-disc">
+                                Access to a laptop or desktop computer
+                            </li>
+
+                            <li class="list-disc">
+                                Willingness to practice regularly
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                    <!-- Who Is This Course For -->
+                    <section class="bg-white rounded-3xl p-8 shadow">
+
+                        <h2 class="text-3xl font-bold">
+                            Who Is This Course For
+                        </h2>
+
+                        <ul class="mt-5 ml-6 space-y-2">
+
+                            <li class="list-disc">
+                                School Students
+                            </li>
+
+                            <li class="list-disc">
+                                College Students
+                            </li>
+
+                            <li class="list-disc">
+                                Job Seekers
+                            </li>
+
+                            <li class="list-disc">
+                                Freelancers
+                            </li>
+
+                            <li class="list-disc">
+                                Anyone interested in creating websites
+                            </li>
+
+                        </ul>
+
+                        <p class="mt-6 font-semibold text-lg text-gray-900">
+                            By the end of the course, students will be able to design,
+                            develop and deploy responsive websites with confidence.
+                        </p>
+
+                    </section>
+
+                    <!-- Curriculum -->
+                    <section class="bg-white rounded-3xl p-8 shadow mb-10">
+
+                        <h2 class="text-3xl font-bold">
+                            Course Curriculum
+                        </h2>
+
+                        <div class="mt-6 space-y-4">
+
+                            <div class="bg-gray-100 rounded-2xl p-5">
+                                Module 1 - HTML Fundamentals
+                            </div>
+
+                            <div class="bg-gray-100 rounded-2xl p-5">
+                                Module 2 - CSS & Responsive Design
+                            </div>
+
+                            <div class="bg-gray-100 rounded-2xl p-5">
+                                Module 3 - JavaScript Basics
+                            </div>
+
+                            <div class="bg-gray-100 rounded-2xl p-5">
+                                Module 4 - Projects & Deployment
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div>
+
+                <div class="sticky top-28">
+
+                    <div class="bg-[#FAEED4] border border-orange-200 rounded-3xl p-8 shadow-lg">
+
+                        <h3 class="text-2xl font-bold mb-6">
+                            Course Includes
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <div class="bg-white rounded-2xl md:p-5 p-5 text-center">
+                                <h4 class="md:text-3xl text-lg font-bold text-orange-500">
+                                    3+
+                                </h4>
+                                <p>Projects</p>
+                            </div>
+
+                            <div class="bg-white rounded-2xl md:p-5 p-3 text-center">
+                                <h4 class="md:text-3xl font-bold text-orange-500 text-lg">
+                                    8
+                                </h4>
+                                <p>Weeks</p>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-3 md:p-5 text-center">
+                                <h4 class="md:text-3xl text-lg font-bold text-orange-500">
+                                    100%
+                                </h4>
+                                <p>Practical</p>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-3 md:p-5 text-center">
+                                <h4 class="md:text-3xl font-bold text-orange-500 text-lg">
+                                    1
+                                </h4>
+                                <p class="md:text-lg text-md ">Certificate</p>
+                            </div>
+
+                        </div>
+
+                        <hr class="my-8 border-orange-200">
+
+                        <div class="space-y-4">
+
+                            <div class="flex justify-between">
+                                <span class="font-medium">
+                                    Level
+                                </span>
+                                <span>
+                                    Beginner
+                                </span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span class="font-medium">
+                                    Language
+                                </span>
+                                <span>
+                                    English / Hindi
+                                </span>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <span class="font-medium">
+                                    Mode
+                                </span>
+                                <span>
+                                    Offline
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="w-full mt-8 bg-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
+
+                            <a href="/join-computer-course.html">Enroll Now</a>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Course Detail Section Ends here  -->
+
+
+    <!-- Other Courses are here  -->
+
+    <section class="py-12 w-[90%] mx-auto">
+
+        <div class="flex items-center justify-between">
+            <h1 class="text-3xl font-bold">Other Courses</h1>
+            <button
+                class="bg-[#251901] rounded-xl w-[170px] h-[50px] flex items-center justify-center text-white p-6 hover:bg-orange-500 transition duration-300"><a
+                    href="/computer-course.html">More Courses
+                </a></button>
+        </div>
+
+        <!-- Other Courses Card  -->
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 py-10 ">
+
+            <!-- Ms Office Card  -->
+            <div class="flex  justify-center flex-col gap-6 bg-white shadow p-3">
+                <img src="public/dravidian-campus-ms-office-classes.jpeg" alt="dravidian-campus-ms-office-course"
+                    class="rounded ">
+                <h3 class="font-bold text-2xl">Ms Office</h3>
+
+                <p class="inline-block
+                       rounded-full
+                       px-4
+                       py-2
+                       bg-orange-200/20
+                       text-orange-500
+                       text-xs
+                       sm:text-sm
+                       border
+                       border-white/20
+                       backdrop-blur-xl
+                       w-[30%]
+                       shadow-lg">
+                    Beginner
+                </p>
+
+                <button
+                    class="w-[50%] h-[40px] flex items-center justify-center bg-[#251901] border border-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
+
+                    <a href="/join-computer-course.html">Join Now</a>
+
+                </button>
+            </div>
+
+            <!-- Python Programming -->
+
+            <div class="flex  justify-center flex-col gap-6 bg-white shadow p-3">
+                <img src="public/dravidian-campus-python-classes.jpg" alt="dravidian-campus-ms-office-course"
+                    class="rounded ">
+                <h3 class="font-bold text-2xl">Python Programming</h3>
+
+                <p class="inline-block
+                       rounded-full
+                       px-4
+                       py-2
+                       bg-orange-200/20
+                       text-orange-500
+                       text-xs
+                       sm:text-sm
+                       border
+                       border-white/20
+                       backdrop-blur-xl
+                       w-[30%]
+                       shadow-lg">
+                    Beginner
+                </p>
+
+                <button
+                    class="w-[50%] h-[40px] flex items-center justify-center bg-[#251901] border border-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
+
+                    <a href="/join-computer-course.html">Join Now</a>
+
+                </button>
+            </div>
+
+
+            <div class="flex  justify-center flex-col gap-6 bg-white shadow p-3">
+                <img src="public/dravidian-campus-java-classes.jpg" alt="dravidian-campus-ms-office-course"
+                    class="rounded ">
+                <h3 class="font-bold text-2xl">Java </h3>
+
+                <p class="inline-block
+                       rounded-full
+                       px-4
+                       py-2
+                       bg-orange-200/20
+                       text-orange-500
+                       text-xs
+                       sm:text-sm
+                       border
+                       border-white/20
+                       backdrop-blur-xl
+                       w-[30%]
+                       shadow-lg">
+                    Medium
+                </p>
+
+                <button
+                    class="w-[50%] h-[40px] flex items-center justify-center bg-[#251901] border border-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
+
+                    <a href="/join-computer-course.html">Join Now</a>
+
+                </button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Other Courses Ends here  -->
+
+    <!-- Footer is here  -->
+
+    <footer class="bg-[#251901] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-16">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Brand -->
+                <div>
+
+                    <div class="flex items-center gap-3">
+
+                        <img src="public/logo.png" alt="Dravidian Campus Logo"
+                            class="w-12 h-12 rounded-full object-cover">
+
+                        <h3 class="text-2xl font-bold">
+                            Dravidian Campus
+                        </h3>
+
+                    </div>
+
+                    <p class="mt-5 text-gray-400 leading-relaxed">
+                        Empowering students through quality education,
+                        expert mentorship, and a focused learning
+                        environment.
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-5">
+                        Quick Links
+                    </h4>
+
+                    <ul class="space-y-3 text-gray-400">
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Courses
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Library
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-400 transition">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Programs -->
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-5">
+                        Our Programs
+                    </h4>
+
+                    <ul class="space-y-3 text-gray-400">
+
+                        <li>Competitive Exams</li>
+
+                        <li>Tuition Classes</li>
+
+                        <li>Board Exam Preparation</li>
+
+                        <li>Computer Courses</li>
+
+                        <li>English Speaking</li>
+
+                        <li>Digital Library</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h4 class="text-lg font-semibold mb-5">
+                        Contact Information
+                    </h4>
+
+                    <div class="space-y-4 text-gray-400">
+
+                        <p class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-orange-400">
+                                add_call
+                            </span>
+                            +91 XXXXX XXXXX
+                        </p>
+
+                        <p class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-orange-400">
+                                mail
+                            </span> info@dravidiancampus.com
+                        </p>
+
+                        <p class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-orange-400">
+                                location_on
+                            </span> Address
+                        </p>
+
+                        <p class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-orange-400">
+                                schedule
+                            </span> Mon - Sat: 8 AM - 8 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                    <p class="text-gray-500 text-center md:text-left">
+                        © 2026 Dravidian Campus. All Rights Reserved.
+                    </p>
+
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-5 text-2xl">
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            <img src="public/instagram.png" alt="dravidian campus instagram" srcset="">
+                        </a>
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            <img src="public/facebook.png" alt="dravidian campus facebook">
+                        </a>
+
+
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            <img src="public/youtube.png" alt="dravidian campus youtube">
+                        </a>
+
+                        <a href="#" class="hover:text-orange-400 transition">
+                            <img src="public/telegram.png" alt="dravidian campus telegram">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+
+
+
+
+</html>

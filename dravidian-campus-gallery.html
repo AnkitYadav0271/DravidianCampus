@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Gallery Section  -->
+
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#FAEED4] via-orange-100 to-orange-200 py-24">
+
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-orange-300 rounded-full blur-3xl opacity-40"></div>
+
+        <div class="max-w-7xl mx-auto px-6 text-center relative">
+
+            <span class="inline-block px-5 py-2 rounded-full bg-orange-100 text-orange-500 font-medium">
+                Campus Gallery
+            </span>
+
+            <h1 class="mt-6 text-5xl md:text-6xl font-bold">
+                Explore Dravidian Campus
+            </h1>
+
+            <p class="mt-6 text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
+                Take a closer look at our classrooms, library, computer lab,
+                learning environment, and student activities.
+            </p>
+
+        </div>
+
+
+    </section>
+
+    <!-- Gallery Categories -->
+
+    <section class="py-12">
+
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-wrap justify-center gap-4">
+
+                <button class="px-6 py-3 rounded-full bg-orange-400 text-white font-medium cursor-pointer">
+                    <a href="/dravidian-campus-gallery.html">All</a>
+                </button>
+
+                <button class="px-6 py-3 rounded-full bg-white shadow hover:bg-orange-100 transition cursor-pointer">
+                    <a href="">Campus</a>
+                </button>
+
+                <button class="px-6 py-3 rounded-full bg-white shadow hover:bg-orange-100 transition cursor-pointer">
+                    <a href="">Campus</a>
+                </button>
+
+                <button class="px-6 py-3 rounded-full bg-white shadow hover:bg-orange-100 transition cursor-pointer">
+                    <a href="">Library</a>
+                </button>
+
+                <button class="px-6 py-3 rounded-full bg-white shadow hover:bg-orange-100 transition cursor-pointer">
+                    <a href="">Computer Lab</a>
+                </button>
+
+                <button class="px-6 py-3 rounded-full bg-white shadow hover:bg-orange-100 transition">
+                    <a href="">Events</a>
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Gallery Grid -->
+
+    <section class="py-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-3">
+
+                <!-- Large Image -->
+                <div class="md:col-span-8">
+                    <img src="public/dravidian-campus.jpg" alt="Campus"
+                        class="w-full h-[420px] object-cover rounded-3xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+                <!-- Tall Image -->
+                <div class="md:col-span-4">
+                    <img src="public/dravidian-campus-cat.jpg" alt="Library"
+                        class="w-full h-[420px] object-cover rounded-3xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+                <!-- Row 2 -->
+                <div class="md:col-span-4">
+                    <img src="public/dravidian-campus-java-classes.jpg" alt="Classroom"
+                        class="w-full h-[350px] object-cover rounded-3xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+                <div class="md:col-span-4">
+                    <img src="public/dravidian-campus-python-classes.jpeg" alt="Computer Lab"
+                        class="w-full h-[350px] object-cover rounded-3xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+                <div class="md:col-span-4">
+                    <img src="public/dravidian-campus-tuition-classess.jpeg" alt="Events"
+                        class="w-full h-[350px] object-cover rounded-3xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+                <!-- Bottom Wide Image -->
+                <div class="md:col-span-12">
+                    <img src="public/dravidian-campus-web-dev-course.jpeg" alt="Students"
+                        class="w-full h-[280px] object-cover rounded-3xl hover:scale-[1.02] transition duration-500">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

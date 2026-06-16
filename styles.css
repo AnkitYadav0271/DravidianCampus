@@ -1,7 +1,139 @@
-body{
-    font-family: 'Inter', sans-serif;
+body {
+  font-family: "Inter", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Poppins', sans-serif;
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-animated {
+  animation: appear 1s linear;
+  animation-range: entry 70% cover 40%;
+}
+
+/* whatsapp animation  */
+
+@keyframes pulse-whatsapp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.whatsapp-btn {
+  animation: pulse-whatsapp 2s infinite;
+}
+
+/* Transition Animation  */
+
+@view-transition {
+  navigation: auto;
+}
+
+/* main {
+  view-transition-name: page-content;
+} */
+
+::view-transition-group(root) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+}
+
+::view-transition-old(root) {
+  animation: slide-out 0.5s ease forwards;
+}
+
+::view-transition-new(root) {
+  animation: slide-in 0.5s ease forwards;
+}
+
+@keyframes slide-out {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Course Image Animation  */
+
+/* .course-image {
+  view-transition-name: web-dev-image;
+}
+
+.hero-image {
+  view-transition-name: web-dev-image;
+}
+
+.teacher-card {
+  view-transition-name: ankit-photo;
+}
+
+.teacher-profile {
+    view-transition-name: ankit-photo;
+}
+
+::view-transition-group(web-development-image),
+::view-transition-group(java-image),
+::view-transition-group(python-image),
+::view-transition-group(typing-image),
+::view-transition-group(tally-image),
+::view-transition-group(tutor-image) {
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+} */
+
+.web-dev-image {
+  view-transition-name: web-dev;
+}
+
+.hero-image {
+  view-transition-name: web-dev;
+}
+
+/* Gallery Image css  */
+
+.gallery img {
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  filter: brightness(1.05);
 }
