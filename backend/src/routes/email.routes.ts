@@ -1,4 +1,4 @@
-import Router from "express";
+import {Router} from "express";
 import { emailController } from "../controllers/email.controller.ts";
 
 const router = Router({mergeParams:true});

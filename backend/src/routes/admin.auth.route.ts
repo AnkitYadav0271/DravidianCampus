@@ -1,4 +1,4 @@
-import Router from "express";
+import {Router} from "express";
 import {
   adminLoginController,
   changePasswordController,
@@ -9,7 +9,7 @@ import {
 import { isAuthenticated } from "../middleware/auth.middleware.ts";
 
 //! mergeParams:true add this here
-const router = Router();
+const router = Router({mergeParams:true});
 
 router.post("/login", adminLoginController);
 router.post("/logout", isAuthenticated, logoutController);

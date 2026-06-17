@@ -17,7 +17,6 @@ export const isAuthenticated = async (
   next: NextFunction,
 ) => {
   try {
-
     const token = req.cookies?.accessToken;
 
     if (!token) {
@@ -31,7 +30,6 @@ export const isAuthenticated = async (
     let decoded;
     try {
       decoded = jwt.verify(token, process.env.JWT_SECRET! as string);
-      console.log("Logging decoded:", decoded);
     } catch (error) {
       if (error.name === "TokenExpiredError") {
         return res.status(401).json({
@@ -47,7 +45,7 @@ export const isAuthenticated = async (
 
     // Find user
     const user = await adminModel.findById(decoded._id);
-    console.log("Logging user :", user);
+
     if (!user) {
       return res.status(404).json({
         success: false,

@@ -3,6 +3,7 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 dotenv.config();
 import { rateLimit } from "express-rate-limit";
+import offerRouter from "./src/routes/offer.route.ts";
 
 import express from "express";
 import cors from "cors";
@@ -29,8 +30,11 @@ app.use(
   }),
 );
 
+//*Routes starts here
+
 app.use("/", emailRouter);
 app.use("/admin", authRouter);
+app.use("/offer", offerRouter);
 
 await connectDb();
 await seedAdmin();
