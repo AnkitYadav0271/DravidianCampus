@@ -21,3 +21,12 @@ export type EmailArgs = {
   course: string;
   message?: string;
 };
+
+
+//* Models types are here 
+
+export type AdminType = {
+  email:string
+  password:string,
+  otp:string
+}

@@ -1,6 +1,11 @@
 import type { Request, Response } from "express";
 import { generateEnquiryEmail } from "../services/email.service.ts";
 
+//________________________________________________________________________//
+
+//                     Student Query Email                                  //
+
+//________________________________________________________________________//
 export const emailController = async (req: Request, res: Response) => {
   const { fullName, email, phoneNo, course, message } = req.body;
   if(!fullName  || !phoneNo || !course ){
@@ -15,3 +20,6 @@ export const emailController = async (req: Request, res: Response) => {
     return res.status(400).json({ success: false, message: error });
   }
 };
+
+
+

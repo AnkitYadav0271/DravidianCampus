@@ -1,11 +1,15 @@
-import { configDotenv } from "dotenv";
+import dotenv from "dotenv";
 import helmet from "helmet";
-configDotenv();
+import cookieParser from "cookie-parser";
+dotenv.config();
 import { rateLimit } from "express-rate-limit";
 
 import express from "express";
 import cors from "cors";
 import emailRouter from "./src/routes/email.routes.ts";
+import { connectDb } from "./src/db/db.ts";
+import authRouter from "./src/routes/admin.auth.route.ts";
+import { seedAdmin } from "./src/helper/seed.admin.ts";
 
 const limit = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -14,6 +18,7 @@ const limit = rateLimit({
   legacyHeaders: false,
 });
 const app = express();
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(express.json());
@@ -25,7 +30,10 @@ app.use(
 );
 
 app.use("/", emailRouter);
+app.use("/admin", authRouter);
 
-app.listen(8000, () => {
+await connectDb();
+await seedAdmin();
+app.listen(8000, async () => {
   console.log("App is running on port:8000");
 });
