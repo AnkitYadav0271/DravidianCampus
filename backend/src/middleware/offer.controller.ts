@@ -60,7 +60,7 @@ export const uploadOfferController = async (req: Request, res: Response) => {
 
 export const getOfferImageController = async (req: Request, res: Response) => {
   try {
-    const offers = await offerModel.find().sort({ createdAt: -1 });
+    const offers = await offerModel.find().sort({ createdAt: -1 }).limit(5);
     return res
       .status(200)
       .json({ success: true, message: "got the Images", offers });
