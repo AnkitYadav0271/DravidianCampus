@@ -70,3 +70,36 @@ export const getOfferImageController = async (req: Request, res: Response) => {
       .json({ success: false, message: "Internal server Error", err });
   }
 };
+
+
+export const deleteOfferController = async (
+  req: Request,
+  res: Response
+) => {
+
+  const { id } = req.params;
+
+  const offer =
+    await offerModel.findById(id);
+
+  if (!offer) {
+
+    return res.status(404).json({
+      success: false,
+      message: "Offer not found",
+    });
+
+  }
+
+  await cloudinary.uploader.destroy(
+    offer.publicId
+  );
+
+  await offerModel.findByIdAndDelete(id);
+
+  return res.status(200).json({
+    success: true,
+    message: "Offer deleted",
+  });
+
+};
