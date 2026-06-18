@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 import { rateLimit } from "express-rate-limit";
 import offerRouter from "./src/routes/offer.route.ts";
+import galleryRouter from "./src/routes/gallery.route.ts";
 
 import express from "express";
 import cors from "cors";
@@ -14,7 +15,7 @@ import { seedAdmin } from "./src/helper/seed.admin.ts";
 
 const limit = rateLimit({
   windowMs: 15 * 60 * 1000,
-  limit: 50,
+  limit: 5000,
   standardHeaders: "draft-8",
   legacyHeaders: false,
 });
@@ -40,7 +41,8 @@ app.use(
 
 app.use("/", emailRouter);
 app.use("/admin", authRouter);
-app.use("/offer", offerRouter);
+app.use("/admin/offers", offerRouter);
+app.use("/admin/gallery", galleryRouter);
 
 await connectDb();
 await seedAdmin();

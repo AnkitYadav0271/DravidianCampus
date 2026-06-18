@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dravidian Campus Admin</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-orange-50 via-white to-orange-100 min-h-screen">
+
+    <div class="flex flex-col lg:flex-row min-h-screen">
+
+        <aside
+            class="w-full lg:w-72 bg-white/80 backdrop-blur-xl border-b lg:border-b-0 lg:border-r border-orange-200 shadow-xl flex flex-col">
+
+            <div class="p-6 sm:p-8 border-b border-orange-200">
+                <h1 class="text-2xl sm:text-3xl font-bold text-orange-600">
+                    Dravidian Campus
+                </h1>
+
+                <p class="text-zinc-500 mt-1 sm:mt-2 text-sm sm:text-base">
+                    Admin Panel
+                </p>
+            </div>
+
+            <nav
+                class="p-4 sm:p-5 flex flex-row lg:flex-col gap-3 lg:space-y-3 flex-1 overflow-x-auto lg:overflow-x-visible">
+
+                <button id="offersBtn"
+                    class="w-full whitespace-nowrap lg:whitespace-normal text-center lg:text-left px-5 py-3 sm:py-4 rounded-2xl bg-orange-500 text-white font-medium shadow-lg">
+                    Offers
+                </button>
+
+                <button id="galleryBtn"
+                    class="w-full whitespace-nowrap lg:whitespace-normal text-center lg:text-left px-5 py-3 sm:py-4 rounded-2xl bg-white hover:bg-orange-50 font-medium transition shadow">
+                    Gallery
+                </button>
+
+            </nav>
+
+            <div class="p-4 sm:p-5 border-t border-orange-200">
+
+                <button id="logoutBtn"
+                    class="w-full py-3 sm:py-4 rounded-2xl bg-red-500 text-white hover:bg-red-600 transition shadow-lg text-sm sm:text-base">
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+        <main class="flex-1 p-4 sm:p-10">
+
+            <div id="resultDiv" class="hidden fixed top-6 right-6 z-[9999]
+           min-w-[280px] sm:min-w-[320px] max-w-md
+           px-6 py-4
+           rounded-2xl
+           shadow-2xl
+           backdrop-blur-lg
+           border
+           transition-all duration-300">
+
+                <p id="resultMessage" class="font-medium text-sm sm:text-base"></p>
+
+            </div>
+
+            <div class="mb-8 sm:mb-10">
+
+                <h2 class="text-2xl sm:text-4xl font-bold text-zinc-800">
+                    Welcome Back
+                </h2>
+
+                <p class="text-zinc-500 mt-2 text-sm sm:text-base">
+                    Manage offers and gallery images for Dravidian Campus.
+                </p>
+
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-xl rounded-3xl border border-orange-100 shadow-xl p-6 sm:p-8">
+
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-zinc-800">
+                            Upload New Image
+                        </h3>
+
+                        <p class="text-zinc-500 mt-1 text-sm sm:text-base">
+                            Upload offers or gallery images instantly.
+                        </p>
+                    </div>
+
+                    <button
+                        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-orange-500 text-white hover:bg-orange-600 transition upload-btn">
+                        Upload
+                    </button>
+
+                </div>
+
+                <label
+                    class="mt-6 sm:mt-8 flex flex-col items-center justify-center border-2 border-dashed border-orange-300 rounded-3xl p-8 sm:p-16 cursor-pointer hover:bg-orange-50 transition">
+
+                    <div class="text-4xl sm:text-6xl mb-4">
+                        ☁️
+                    </div>
+
+                    <h4 class="text-lg sm:text-xl font-semibold text-center">
+                        Drag & Drop Image
+                    </h4>
+
+                    <p class="text-zinc-500 mt-2 text-sm sm:text-base">
+                        JPG • PNG • WEBP
+                    </p>
+
+                    <input type="file" class="hidden">
+
+                </label>
+
+            </div>
+
+            <div class="flex items-center justify-between mt-10 sm:mt-12 mb-6 gap-2">
+
+                <h3 class="text-2xl sm:text-3xl font-bold text-zinc-800">
+                    Uploaded Images
+                </h3>
+
+                <span
+                    class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full bg-orange-100 text-orange-600 font-medium whitespace-nowrap"
+                    id="imageCount">
+                    0 Images
+                </span>
+
+            </div>
+
+            <div id="deleteModal"
+                class="hidden fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm z-50 p-4">
+
+                <div class="bg-white p-6 rounded-2xl w-full max-w-sm shadow-2xl">
+
+                    <h3 class="text-lg font-semibold">
+                        Delete Image?
+                    </h3>
+
+                    <p class="text-gray-500 mt-2 text-sm sm:text-base">
+                        This action cannot be undone.
+                    </p>
+
+                    <div class="flex gap-3 mt-5">
+
+                        <button id="cancelBtn"
+                            class="flex-1 bg-gray-200 py-2.5 rounded-xl transition hover:bg-gray-300">
+                            Cancel
+                        </button>
+
+                        <button id="confirmBtn"
+                            class="flex-1 bg-red-500 text-white py-2.5 rounded-xl transition hover:bg-red-600">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="imageGrid">
+
+                <div class="group overflow-hidden rounded-3xl bg-white shadow-xl border border-orange-100 w-full">
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/adminDashboard.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@ import {
   deleteOfferController,
   getOfferImageController,
   uploadOfferController,
-} from "../middleware/offer.controller.ts";
+} from "../controllers/offer.controller.ts";
 
 const router = Router({ mergeParams: true });
 
@@ -19,6 +19,6 @@ router.post(
 
 router.get("/images", getOfferImageController);
 
-router.delete("/image", deleteOfferController);
+router.delete("/image/:id", deleteOfferController);
 
 export default router;

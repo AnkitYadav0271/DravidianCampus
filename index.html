@@ -50,9 +50,9 @@
                         Home
                     </a>
 
-                    <a href="/courses.html"
+                    <a href="/academics.html"
                         class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        Courses
+                        Academics
                     </a>
 
                     <a href="/library.html"
@@ -61,8 +61,8 @@
                     </a>
 
                     <a href="/computer-course.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        computer Course
+                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300 active:bg-orange-300">
+                        Computer Course
                     </a>
 
                     <button
@@ -114,13 +114,13 @@
 
     <!-- offers carousel starts here  -->
 
-    <section class="py-16 w-full mt-2 h-[350px] mb-3">
+    <section class="py-16 w-full mt-2 h-[350px] mb-3" id="offersCorousel">
 
         <div class="mx-auto w-full h-[350px]">
 
             <div class="relative overflow-hidden shadow-2xl w-full">
 
-                
+
                 <div id="offerSlider" class="flex transition-transform duration-700 ease-in-out">
                 </div>
 
@@ -681,13 +681,13 @@
 
 
         <!-- Gallery Starts here  -->
-        <section class="py-24">
+        <section class="py-24" id="gallerySection">
 
-            <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6 mb-6">
 
                 <!-- Heading -->
 
-                <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-10">
 
                     <div>
 
@@ -710,55 +710,15 @@
 
                 <!-- Gallery -->
 
-                <div class="grid md:grid-cols-12 gap-4 mt-14">
-
-                    <!-- Large -->
-
-                    <div class="md:col-span-7">
-
-                        <img src="public/dravidian-campus.jpg" class="w-full h-[450px] object-cover rounded-3xl">
-
-                    </div>
-
-                    <!-- Right -->
-
-                    <div class="md:col-span-5">
-
-                        <img src="public/dravidian-campus-web-dev-classes.jpeg"
-                            class="w-full h-[450px] object-cover rounded-3xl">
-
-                    </div>
-
-                    <!-- Bottom -->
-
-                    <div class="md:col-span-4">
-
-                        <img src="public/dravidian-campus-ms-office-classes.jpeg"
-                            class="w-full h-[280px] object-cover rounded-3xl">
-
-                    </div>
-
-                    <div class="md:col-span-4">
-
-                        <img src="public/dravidian-campus-java-classes.jpeg"
-                            class="w-full h-[280px] object-cover rounded-3xl">
-
-                    </div>
-
-                    <div class="md:col-span-4">
-
-                        <img src="public/dravidian-campus-board-exam-classes.jpeg"
-                            class="w-full h-[280px] object-cover rounded-3xl">
-
-                    </div>
-
+                <div id="imageGrid"
+                    class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6 [column-fill:_balance] w-full">
                 </div>
 
                 <!-- CTA -->
 
                 <div class="text-center mt-12">
 
-                    <a href="/gallery.html" class="inline-flex items-center gap-3
+                    <a href="/dravidian-campus-gallery.html" class="inline-flex items-center gap-3
                        bg-[#251901]
                        text-white
                        px-8 py-4
@@ -1102,6 +1062,7 @@
     <!-- Footer Ends here  -->
     <script src="/index.js"></script>
     <script src="js/offers.js"></script>
+    <script src="js/galleryHomePage.js"></script>
 
 
 </body>

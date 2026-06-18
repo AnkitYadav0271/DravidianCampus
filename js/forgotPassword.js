@@ -189,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       const data = await response.json();
 
-
       if (response.ok) {
         showStatus(
           "Password changed successfully! Redirecting down to dashboard panel...",
@@ -198,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Timeout wait window allows operational messaging visibility to register before triggering redirect engine mapping routines
         setTimeout(() => {
-          window.location.href = "/admin/adminLogin.html";
+          window.location.href = "/admin/login.html";
         }, 2200);
       } else {
         showStatus(data.message || "Failed rewriting user credential records.");

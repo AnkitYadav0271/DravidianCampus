@@ -50,7 +50,7 @@ export const adminLoginController = async (req: Request, res: Response) => {
       { _id: admin._id },
       process.env.JWT_SECRET!,
       {
-        expiresIn: "10d",
+        expiresIn: "30d",
       },
     );
 
@@ -64,12 +64,14 @@ export const adminLoginController = async (req: Request, res: Response) => {
 
     await Session.create({ admin: admin });
 
+    const isProduction = process.env.NODE_ENV === "production";
+
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
       path: "/",
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax",
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     });
 
     return res.status(200).json({
@@ -95,10 +97,14 @@ export const logoutController = async (req: AuthRequest, res: Response) => {
     const admin = req.adminId;
     await Session.deleteMany({ admin: admin });
 
+    const isProduction = process.env.NODE_ENV === "production";
+
     res.cookie("accessToken", "", {
       httpOnly: true,
-      sameSite: "lax",
-      secure: process.env.NODE_ENV == "production",
+      path: "/",
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax",
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     });
     return res
       .status(200)
@@ -151,11 +157,13 @@ export const forgotPasswordController = async (req: Request, res: Response) => {
       { _id: admin._id },
       process.env.JWT_SECRET! as string,
     );
+    const isProduction = process.env.NODE_ENV === "production";
+
     res.cookie("resetToken", resetToken, {
       httpOnly: true,
       path: "/",
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax",
       maxAge: 10 * 60 * 1000,
     });
 

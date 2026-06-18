@@ -3,6 +3,7 @@ const slider = document.getElementById("offerSlider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const dotsContainer = document.getElementById("dots");
+const offerCorousel = document.getElementById("offersCorousel");
 
 let current = 0;
 let slides;
@@ -18,10 +19,22 @@ function updateSlider() {
 }
 
 async function loadOffers() {
-  const response = await fetch("http://localhost:8000/offer/images");
+  const response = await fetch("http://localhost:8000/admin/offers/images");
 
   const data = await response.json();
   console.log(data);
+
+  if (!response.ok) {
+    offerCorousel.classList.add("hidden");
+    return;
+  }
+
+  if (data?.offers.length <= 0) {
+    offerCorousel.classList.add("hidden");
+    return;
+  }
+
+  offerCorousel.classList.remove("hidden");
 
   slider.innerHTML = data.offers
     .map(
