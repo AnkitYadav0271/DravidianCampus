@@ -3,6 +3,7 @@ import {
   adminLoginController,
   changePasswordController,
   forgotPasswordController,
+  getCurrentUserController,
   logoutController,
   verifyOtpController,
 } from "../controllers/admin.auth.controller.ts";
@@ -19,5 +20,6 @@ router.post(
   verifyOtpController,
 );
 router.post("/change-password", changePasswordController);
+router.get("/current-user",isAuthenticated,getCurrentUserController);
 
 export default router;

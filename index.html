@@ -112,10 +112,49 @@
 
     <!-- Navbar Ends here  -->
 
+    <!-- offers carousel starts here  -->
+
+    <section class="py-16 w-full mt-2 h-[350px] mb-3">
+
+        <div class="mx-auto w-full h-[350px]">
+
+            <div class="relative overflow-hidden shadow-2xl w-full">
+
+                
+                <div id="offerSlider" class="flex transition-transform duration-700 ease-in-out">
+                </div>
+
+
+                <button id="prevBtn" class="absolute left-5 top-1/2 -translate-y-1/2 
+                w-12 h-12 rounded-full bg-white/80 backdrop-blur-lg 
+                shadow-lg flex items-center justify-center 
+                hover:scale-110 transition">
+                    ←
+                </button>
+
+
+                <button id="nextBtn" class="absolute right-5 top-1/2 -translate-y-1/2 
+                w-12 h-12 rounded-full bg-white/80 backdrop-blur-lg 
+                shadow-lg flex items-center justify-center 
+                hover:scale-110 transition">
+                    →
+                </button>
+
+
+                <div id="dots" class="absolute bottom-5 left-1/2 
+                -translate-x-1/2 flex gap-3">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <main>
         <!-- Hero section is here -->
         <section
-            class="relative isolate overflow-hidden min-h-screen rounded-bl-[100px] bg-cover bg-center bg-no-repeat mt-10 md:mt-0"
+            class="relative isolate overflow-hidden min-h-screen rounded-bl-[100px] bg-cover bg-center bg-no-repeat mt-2 md:mt-5"
             style="background-image: url('public/dravidian-campus.jpg');">
 
             <!-- Shadow black  -->
@@ -1062,7 +1101,7 @@
     </footer>
     <!-- Footer Ends here  -->
     <script src="/index.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/offers.js"></script>
 
 
 </body>

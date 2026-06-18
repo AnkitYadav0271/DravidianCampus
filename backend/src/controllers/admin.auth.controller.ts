@@ -66,8 +66,9 @@ export const adminLoginController = async (req: Request, res: Response) => {
 
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
+      path: "/",
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
@@ -96,7 +97,7 @@ export const logoutController = async (req: AuthRequest, res: Response) => {
 
     res.cookie("accessToken", "", {
       httpOnly: true,
-      sameSite: "strict",
+      sameSite: "lax",
       secure: process.env.NODE_ENV == "production",
     });
     return res
@@ -135,11 +136,12 @@ export const forgotPasswordController = async (req: Request, res: Response) => {
     }
 
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    console.log("Logging otp: ", otp);
+
     const expiry = new Date(Date.now() + 10 * 60 * 1000);
 
     admin.otp = otp;
     admin.otpExpiry = expiry;
+    admin.otpLastSentAt = new Date();
 
     await admin.save();
 
@@ -151,8 +153,9 @@ export const forgotPasswordController = async (req: Request, res: Response) => {
     );
     res.cookie("resetToken", resetToken, {
       httpOnly: true,
+      path: "/",
       secure: process.env.NODE_ENV === "production",
-      sameSite: true,
+      sameSite: "lax",
       maxAge: 10 * 60 * 1000,
     });
 
@@ -176,7 +179,12 @@ export const forgotPasswordController = async (req: Request, res: Response) => {
 export const verifyOtpController = async (req: Request, res: Response) => {
   const otp = req.body.otp;
 
+  console.log("log otp here:", otp);
+
   let resetToken = req.cookies.resetToken;
+  console.log("Logging cookies :", req.headers.cookie);
+  console.log("logging req Header", req.headers);
+  console.log("Logging reset token", resetToken);
 
   if (!resetToken) {
     return res
@@ -289,5 +297,72 @@ export const changePasswordController = async (req: Request, res: Response) => {
     return res
       .status(500)
       .json({ success: false, message: "Internal server error", err });
+  }
+};
+
+export const getCurrentUserController = async (req: Request, res: Response) => {
+  try {
+    const adminId = req.adminId;
+    const admin = await adminModel.findOne({ _id: adminId });
+    return res.status(200).json({ success: true, admin });
+  } catch (err) {
+    return res
+      .status(200)
+      .json({ success: false, message: "Internal Server Error", err });
+  }
+};
+
+export const resendOtpController = async (req: Request, res: Response) => {
+  try {
+    const resetToken = req.cookies.resetToken;
+
+    if (!resetToken) {
+      return res.status(401).json({
+        success: false,
+        message: "Reset session expired. Please start again.",
+      });
+    }
+
+    const decoded = jwt.verify(resetToken, process.env.JWT_SECRET!) as {
+      _id: string;
+    };
+
+    const admin = await adminModel.findById(decoded._id);
+
+    if (!admin) {
+      return res.status(404).json({
+        success: false,
+        message: "Admin not found",
+      });
+    }
+
+    const now = Date.now();
+
+    if (admin.otpLastSentAt && now - admin.otpLastSentAt.getTime() < 60000) {
+      return res.status(429).json({
+        success: false,
+        message: "Please wait 60 seconds before requesting another OTP",
+      });
+    }
+
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+
+    admin.otp = otp;
+    admin.otpExpiry = new Date(Date.now() + 10 * 60 * 1000);
+    admin.otpLastSentAt = new Date();
+
+    await admin.save();
+
+    await sendOtpEmail(admin.email, otp);
+
+    return res.status(200).json({
+      success: true,
+      message: "OTP resent successfully",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Failed to resend OTP",
+    });
   }
 };

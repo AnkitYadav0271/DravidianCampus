@@ -12,41 +12,41 @@ menuBtn.addEventListener("click", () => {
 
 //*Carousel code starts
 
-const libraryImages = ["./public/library1.jpeg", "./public/library3.jpg"];
+// const libraryImages = ["./public/library1.jpeg", "./public/library3.jpg"];
 
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const libraryImageDiv = document.getElementById("libraryImage");
+// const prevBtn = document.getElementById("prevBtn");
+// const nextBtn = document.getElementById("nextBtn");
+// const libraryImageDiv = document.getElementById("libraryImage");
 
-let currentIndex = 0;
+// let currentIndex = 0;
 
-// Auto Slide
-setInterval(() => {
+// // Auto Slide
+// setInterval(() => {
   
-  currentIndex = (currentIndex + 1) % libraryImages.length;
+//   currentIndex = (currentIndex + 1) % libraryImages.length;
   
-  libraryImageDiv.src = libraryImages[currentIndex];
+//   libraryImageDiv.src = libraryImages[currentIndex];
 
-  console.log("Logging Actual one :", libraryImageDiv.src);
-}, 3000);
+//   console.log("Logging Actual one :", libraryImageDiv.src);
+// }, 3000);
 
-// Next Button
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % libraryImages.length;
-  console.log(libraryImages[currentIndex], " : Logging current imageSrc");
-  libraryImageDiv.src = libraryImages[currentIndex];
+// // Next Button
+// nextBtn.addEventListener("click", () => {
+//   currentIndex = (currentIndex + 1) % libraryImages.length;
+//   console.log(libraryImages[currentIndex], " : Logging current imageSrc");
+//   libraryImageDiv.src = libraryImages[currentIndex];
 
-  console.log("Logging Actual one :", libraryImageDiv.src);
-});
+//   console.log("Logging Actual one :", libraryImageDiv.src);
+// });
 
-// Previous Button
-prevBtn.addEventListener("click", () => {
-  console.log("prevButtonClicked :():");
-  currentIndex =
-    (currentIndex - 1 + libraryImages.length) % libraryImages.length;
+// // Previous Button
+// prevBtn.addEventListener("click", () => {
+//   console.log("prevButtonClicked :():");
+//   currentIndex =
+//     (currentIndex - 1 + libraryImages.length) % libraryImages.length;
 
-  libraryImageDiv.src = libraryImages[currentIndex];
-});
+//   libraryImageDiv.src = libraryImages[currentIndex];
+// });
 
 //Navbar transition
 

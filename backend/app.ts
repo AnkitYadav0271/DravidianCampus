@@ -26,7 +26,13 @@ app.use(express.json());
 app.use(limit);
 app.use(
   cors({
-    origin: ["https://dravidiancampus.com", "https://www.dravidiancampus.com"],
+    origin: [
+      "https://dravidiancampus.com",
+      "https://www.dravidiancampus.com",
+      "http://127.0.0.1:5500",
+      "http://localhost:5500",
+    ],
+    credentials: true,
   }),
 );
 
