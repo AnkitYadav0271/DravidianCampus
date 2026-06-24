@@ -13,56 +13,57 @@
 
     <!-- Navbar Container -->
 
-    <div id="navbar"
-        class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow mb-0 fixed top-0 z-50 w-full">
 
-        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto ">
+    <div id="navbar" class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full">
+
+        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto">
 
             <div class="flex items-center justify-between py-3">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-2">
-
-                    <img src="/public/logo.png" alt="Dravidian Campus Logo"
-                        class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
-
-                    <h3 class="font-bold text-sm md:text-lg lg:text-xl cursor-pointer">
+                <div class="flex items-center">
+                    <img src="/public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
+                        class="w-10 h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
+                    <h3 class="font-bold text-orange-400 text-sm md:text-lg lg:text-xl cursor-pointer">
                         Dravidian Campus
                     </h3>
-
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-4 lg:gap-8">
 
                     <a href="/index.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
                         Home
                     </a>
 
-                    <a href="/courses.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        Courses
-                    </a>
-
-                    <a href="/library.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        Library
+                    <a href="/academics.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Academics
                     </a>
 
                     <a href="/computer-course.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300 active:bg-orange-400">
-                        Computer Course
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Computer Courses
                     </a>
+
+
+                    <a href="/library.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Library
+                    </a>
+
+
 
                     <button
                         class="bg-[#251901] text-white px-4 py-2 rounded hover:bg-orange-400 transition duration-300 cursor-pointer">
-                        Join Now
+                        <a href="/join-now.html">Join Now</a>
                     </button>
 
                 </div>
 
-                <!-- Mobile Hamburger -->
                 <button id="menuBtn" class="md:hidden text-3xl font-bold cursor-pointer">
                     ☰
                 </button>
@@ -71,28 +72,28 @@
 
         </nav>
 
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden flex-col border-t border-gray-300 bg-[#FAEED4]">
 
-            <a href="/" class="block p-4 hover:bg-gray-200">
+            <a href="/index.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Home
             </a>
 
-            <a href="/courses.html" class="block p-4 hover:bg-gray-200">
-                Courses
+            <a href="/academics.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Academics
             </a>
 
-            <a href="/library.html" class="block p-4 hover:bg-gray-200">
-                Digital Library
+            <a href="/library.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Library
             </a>
 
-            <a href="/computer-course.html" class="block p-4 hover:bg-gray-200">
-                Computer
+            <a href="/computer-course.html"
+                class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Computer Course
             </a>
 
             <div class="p-4">
-                <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
-                    <a href="join-now.html">Join Now</a>
+                <button class="w-full bg-black text-white py-2 rounded hover:[#251901] transition">
+                    <a href="/join-now.html">Join Now</a>
                 </button>
             </div>
 
@@ -101,6 +102,103 @@
     </div>
 
     <!-- Navbar Ends here  -->
+
+
+    <!-- computer courses hero section starts here  -->
+
+    <section class="relative bg-[#FAEED4] overflow-hidden pt-32 pb-20 md:pt-40 md:pb-24">
+        <div
+            class="absolute -right-16 -top-16 w-[500px] h-[500px] rounded-full bg-orange-300/40 blur-3xl opacity-60 pointer-events-none">
+        </div>
+        <div
+            class="absolute -left-24 bottom-12 w-96 h-96 rounded-full bg-orange-200/50 blur-3xl opacity-50 pointer-events-none">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 backdrop-blur-md border border-orange-200 text-orange-600 text-xs font-semibold tracking-wider uppercase shadow-xs">
+                    <span class="flex h-2 w-2 relative">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    Computer Training Program
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+                    Master Digital Skills & Professional
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">Programming</span>
+                </h1>
+
+                <p class="text-gray-700 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    From fundamental office operations and ultra-fast typing mastery to structural engineering logic in
+                    Java, Python, and Web Development—our expert-led tracks prepare school students, graduates, and
+                    professionals for the future-ready corporate world.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#courses-grid"
+                        class="bg-[#251901] hover:bg-orange-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-black/10 transition-all duration-300 transform hover:-translate-y-0.5">
+                        Explore Skill Tracks
+                    </a>
+                    <a href="/join-computer-course.html"
+                        class="bg-white/80 hover:bg-white backdrop-blur-xs text-slate-900 border border-slate-200/80 font-bold px-7 py-3.5 rounded-xl transition-all duration-300 flex items-center gap-2 group shadow-xs">
+                        Instant Enrollment
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="pt-8 border-t border-orange-900/10 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-black text-orange-500">100%</p>
+                        <p class="text-xs sm:text-sm font-medium text-gray-600 mt-1">Practical Labs</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-black text-orange-500">1:1</p>
+                        <p class="text-xs sm:text-sm font-medium text-gray-600 mt-1">System Focus</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-black text-orange-500">ISO</p>
+                        <p class="text-xs sm:text-sm font-medium text-gray-600 mt-1">Certified Track</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative mt-8 lg:mt-0">
+                <div
+                    class="relative w-full max-w-md mx-auto aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/60 bg-slate-100">
+                    <img src="public/computer-classes-boy.jpeg"
+                        alt="Students practicing programming and technology tracks at Dravidian Campus"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent">
+                    </div>
+                </div>
+
+                <div class="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-orange-100/50 flex items-center gap-3 animate-bounce"
+                    style="animation-duration: 3s;">
+                    <div class="bg-orange-100 p-2.5 rounded-xl text-orange-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-medium">Government Regd.</p>
+                        <p class="text-sm font-bold text-slate-900">ISO Certified Hub</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- computer courses here section ends here  -->
 
 
 
@@ -179,11 +277,11 @@
                             </li>
 
                         </ul>
-                         <a href="/typing-course.html" class="cursor-pointer">
-                        <button
-                            class=" mt-4 py-2 text-green-[#251901] cursor-pointer hover:bg-emerald-700 hover:text-white  w-full bg-emerald-600/60 border border-emerald-800 backdrop-blur-lg shadow-lg rounded-full">
-                            <a >Learn More...</a>
-                        </button>
+                        <a href="/typing-course.html" class="cursor-pointer">
+                            <button
+                                class=" mt-4 py-2 text-green-[#251901] cursor-pointer hover:bg-emerald-700 hover:text-white  w-full bg-emerald-600/60 border border-emerald-800 backdrop-blur-lg shadow-lg rounded-full">
+                                <a>Learn More...</a>
+                            </button>
                         </a>
 
                     </div>
@@ -230,11 +328,62 @@
                             </li>
 
                         </ul>
-                        <a href="/dravidain-campus-ms-office-course.html" class="cursor-pointer" >
-                        <button
-                            class=" mt-4 py-2 text-green-[#251901] hover:bg-emerald-700 hover:text-white w-full cursor-pointer bg-emerald-600/60 border border-emerald-800 backdrop-blur-lg shadow-lg rounded-full">
-                            Learn More...
-                        </button>
+                        <a href="/dravidain-campus-ms-office-course.html" class="cursor-pointer">
+                            <button
+                                class=" mt-4 py-2 text-green-[#251901] hover:bg-emerald-700 hover:text-white w-full cursor-pointer bg-emerald-600/60 border border-emerald-800 backdrop-blur-lg shadow-lg rounded-full">
+                                Learn More...
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!--Image Editing -->
+                <div
+                    class="bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden shadow-lg  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                    <img src="public/dravidian-campus-image-editing-animation-classes.jpeg" alt="MS Office"
+                        class="w-full h-56 object-cover">
+
+                    <div class="p-8">
+
+                        <h3 class="text-2xl font-bold">
+                            Image Editing and Animation
+                        </h3>
+
+                        <p class="mt-4 text-gray-700 leading-relaxed">
+                            Learn Photo Editing, Photoshop, Canva , Figma and Graphics Design.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-gray-700">
+
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                Photo Editing
+                            </li>
+
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                Background Change and Removal
+                            </li>
+
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                Color Corrections and Retouching
+                            </li>
+
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                Office Productivity
+                            </li>
+
+                        </ul>
+                        <a href="/dravidian-campus-image-editing-course.html" class="cursor-pointer">
+                            <button
+                                class=" mt-4 py-2 text-green-[#251901] hover:bg-emerald-700 hover:text-white w-full cursor-pointer bg-emerald-600/60 border border-emerald-800 backdrop-blur-lg shadow-lg rounded-full">
+                                Learn More...
+                            </button>
                         </a>
 
                     </div>
@@ -284,7 +433,7 @@
                         <a href="/dravidain-campus-tally-prime-course.html" class="cursor-pointer">
                             <button
                                 class=" mt-4 py-2 text-green-[#251901] hover:bg-emerald-700 hover:text-white cursor-pointer w-full bg-emerald-600/60 border border-emerald-800 backdrop-blur-lg shadow-lg rounded-full">
-                                    Learn More...
+                                Learn More...
                             </button>
                         </a>
 
@@ -710,6 +859,6 @@
     </footer>
 
     <!-- Footer Ends here  -->
-    <script src="index.js"></script>
+    <script src="navbar.js"></script>
 
 </body>

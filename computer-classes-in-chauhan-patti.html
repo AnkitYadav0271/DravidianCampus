@@ -33,47 +33,49 @@
 <body>
     <!-- Navbar Starts  here  -->
 
-    <div id="navbar"
-        class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow mb-0 fixed top-0 z-50 w-full">
 
-        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto ">
+    <div id="navbar" class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full">
+
+        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto">
 
             <div class="flex items-center justify-between py-3">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-2">
-
-                    <img src="/public/logo.png" alt="Dravidian Campus Logo"
-                        class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
-
-                    <h3 class="font-bold text-sm md:text-lg lg:text-xl cursor-pointer">
+                <div class="flex items-center">
+                    <img src="/public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
+                        class="w-10 h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
+                    <h3 class="font-bold text-orange-400 text-sm md:text-lg lg:text-xl cursor-pointer">
                         Dravidian Campus
                     </h3>
-
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-4 lg:gap-8">
 
                     <a href="/index.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
                         Home
                     </a>
 
-                    <a href="/courses.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        Courses
-                    </a>
-
-                    <a href="/library.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        Library
+                    <a href="/academics.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Academics
                     </a>
 
                     <a href="/computer-course.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
-                        computer Course
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Computer Courses
                     </a>
+
+
+                    <a href="/library.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Library
+                    </a>
+
+
 
                     <button
                         class="bg-[#251901] text-white px-4 py-2 rounded hover:bg-orange-400 transition duration-300 cursor-pointer">
@@ -82,7 +84,6 @@
 
                 </div>
 
-                <!-- Mobile Hamburger -->
                 <button id="menuBtn" class="md:hidden text-3xl font-bold cursor-pointer">
                     ☰
                 </button>
@@ -91,28 +92,28 @@
 
         </nav>
 
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden flex-col border-t border-gray-300 bg-[#FAEED4]">
 
-            <a href="/" class="block p-4 hover:bg-gray-200">
+            <a href="/index.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Home
             </a>
 
-            <a href="/courses.html" class="block p-4 hover:bg-gray-200">
-                Courses
+            <a href="/academics.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Academics
             </a>
 
-            <a href="/library.html" class="block p-4 hover:bg-gray-200">
+            <a href="/library.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Library
             </a>
 
-            <a href="/computer-course.html" class="block p-4 hover:bg-gray-200">
+            <a href="/computer-course.html"
+                class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Computer Course
             </a>
 
             <div class="p-4">
-                <button class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
-                    <a href="join-now.html">Join Now</a>
+                <button class="w-full bg-black text-white py-2 rounded hover:[#251901] transition">
+                    <a href="/join-now.html">Join Now</a>
                 </button>
             </div>
 
@@ -237,178 +238,178 @@
             </div>
         </div>
     </section>
-     <!-- FAQ -->
-   <section class="bg-white py-20">
+    <!-- FAQ -->
+    <section class="bg-white py-20">
 
-    <div class="max-w-4xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto px-6">
 
-        <div class="text-center mb-14">
+            <div class="text-center mb-14">
 
-            <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-500">
-                FAQ
-            </span>
+                <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-500">
+                    FAQ
+                </span>
 
-            <h2 class="mt-4 text-4xl md:text-5xl font-bold">
-                Frequently Asked Questions
-            </h2>
+                <h2 class="mt-4 text-4xl md:text-5xl font-bold">
+                    Frequently Asked Questions
+                </h2>
 
-            <p class="mt-4 text-gray-600">
-                Common questions about our computer training programs.
-            </p>
+                <p class="mt-4 text-gray-600">
+                    Common questions about our computer training programs.
+                </p>
+
+            </div>
+
+            <div class="space-y-4">
+
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
+
+                        <span>
+                            Which is the best computer class in Chauhan Patti?
+                        </span>
+
+                        <span class="faq-icon text-2xl">+</span>
+
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">
+
+                        Dravidian Campus provides practical computer training in
+                        Chauhan Patti including Basic Computer, MS Office,
+                        Tally Prime, Web Development, Java, Python and Typing courses.
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
+
+                        <span>
+                            Do you teach Tally Prime in Chauhan Patti?
+                        </span>
+
+                        <span class="faq-icon text-2xl">+</span>
+
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">
+
+                        Yes. Our Tally Prime course covers accounting,
+                        GST, inventory management, vouchers, reports,
+                        and practical business accounting.
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
+
+                        <span>
+                            Do you provide MS Excel and MS Office training?
+                        </span>
+
+                        <span class="faq-icon text-2xl">+</span>
+
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">
+
+                        Yes. Students learn MS Word, Excel, PowerPoint,
+                        document creation, spreadsheets, formulas,
+                        charts, and presentation design.
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
+
+                        <span>
+                            Can beginners join computer classes?
+                        </span>
+
+                        <span class="faq-icon text-2xl">+</span>
+
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">
+
+                        Absolutely. Our courses are designed for complete
+                        beginners as well as students who want to improve
+                        their existing computer skills.
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
+
+                        <span>
+                            Do you teach programming languages like Java and Python?
+                        </span>
+
+                        <span class="faq-icon text-2xl">+</span>
+
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">
+
+                        Yes. We provide training in Java, Python,
+                        HTML, CSS, and JavaScript with practical
+                        coding exercises and projects.
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
+
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
+
+                        <span>
+                            Who can join your computer courses?
+                        </span>
+
+                        <span class="faq-icon text-2xl">+</span>
+
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">
+
+                        School students, college students, job seekers,
+                        professionals, and business owners can all benefit
+                        from our computer training programs.
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="space-y-4">
-
-            <!-- FAQ 1 -->
-            <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
-
-                <button
-                    class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
-
-                    <span>
-                        Which is the best computer class in Chauhan Patti?
-                    </span>
-
-                    <span class="faq-icon text-2xl">+</span>
-
-                </button>
-
-                <div class="faq-content hidden px-6 pb-6 text-gray-600">
-
-                    Dravidian Campus provides practical computer training in
-                    Chauhan Patti including Basic Computer, MS Office,
-                    Tally Prime, Web Development, Java, Python and Typing courses.
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 2 -->
-            <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
-
-                <button
-                    class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
-
-                    <span>
-                        Do you teach Tally Prime in Chauhan Patti?
-                    </span>
-
-                    <span class="faq-icon text-2xl">+</span>
-
-                </button>
-
-                <div class="faq-content hidden px-6 pb-6 text-gray-600">
-
-                    Yes. Our Tally Prime course covers accounting,
-                    GST, inventory management, vouchers, reports,
-                    and practical business accounting.
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
-
-                <button
-                    class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
-
-                    <span>
-                        Do you provide MS Excel and MS Office training?
-                    </span>
-
-                    <span class="faq-icon text-2xl">+</span>
-
-                </button>
-
-                <div class="faq-content hidden px-6 pb-6 text-gray-600">
-
-                    Yes. Students learn MS Word, Excel, PowerPoint,
-                    document creation, spreadsheets, formulas,
-                    charts, and presentation design.
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
-
-                <button
-                    class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
-
-                    <span>
-                        Can beginners join computer classes?
-                    </span>
-
-                    <span class="faq-icon text-2xl">+</span>
-
-                </button>
-
-                <div class="faq-content hidden px-6 pb-6 text-gray-600">
-
-                    Absolutely. Our courses are designed for complete
-                    beginners as well as students who want to improve
-                    their existing computer skills.
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
-
-                <button
-                    class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
-
-                    <span>
-                        Do you teach programming languages like Java and Python?
-                    </span>
-
-                    <span class="faq-icon text-2xl">+</span>
-
-                </button>
-
-                <div class="faq-content hidden px-6 pb-6 text-gray-600">
-
-                    Yes. We provide training in Java, Python,
-                    HTML, CSS, and JavaScript with practical
-                    coding exercises and projects.
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="faq-item bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden">
-
-                <button
-                    class="faq-btn w-full flex justify-between items-center p-6 text-left font-semibold text-lg cursor-pointer">
-
-                    <span>
-                        Who can join your computer courses?
-                    </span>
-
-                    <span class="faq-icon text-2xl">+</span>
-
-                </button>
-
-                <div class="faq-content hidden px-6 pb-6 text-gray-600">
-
-                    School students, college students, job seekers,
-                    professionals, and business owners can all benefit
-                    from our computer training programs.
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
     <!-- RELATED SERVICES -->
     <section class="bg-gray-100 py-20">
         <div class="max-w-6xl mx-auto px-6">
@@ -422,7 +423,7 @@
                     class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition"> Spoken English Classes </a>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- CTA -->
 
@@ -605,8 +606,8 @@
     </footer>
 
     <!-- Footer Ends here  -->
-<script src="index.js"></script>
-<script src="faq.js"></script>
+    <script src="navbar.js"></script>
+    <script src="faq.js"></script>
 
 </body>
 

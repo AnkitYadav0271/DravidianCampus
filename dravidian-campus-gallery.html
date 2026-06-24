@@ -11,6 +11,98 @@
 
 <body class="bg-gray-100">
 
+    <!-- Navbar Starts here  -->
+
+
+    <div id="navbar" class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full">
+
+        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto">
+
+            <div class="flex items-center justify-between py-3">
+
+                <div class="flex items-center">
+                    <img src="/public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
+                        class="w-10 h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
+                    <h3 class="font-bold text-orange-400 text-sm md:text-lg lg:text-xl cursor-pointer">
+                        Dravidian Campus
+                    </h3>
+                </div>
+
+                <div class="hidden md:flex items-center gap-4 lg:gap-8">
+
+                    <a href="/index.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Home
+                    </a>
+
+                    <a href="/academics.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Academics
+                    </a>
+
+                    <a href="/computer-course.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Computer Courses
+                    </a>
+
+
+                    <a href="/library.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Library
+                    </a>
+
+
+
+                    <button
+                        class="bg-[#251901] text-white px-4 py-2 rounded hover:bg-orange-400 transition duration-300 cursor-pointer">
+                        <a href="/join-now.html">Join Now</a>
+                    </button>
+
+                </div>
+
+                <button id="menuBtn" class="md:hidden text-3xl font-bold cursor-pointer">
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+        <div id="mobileMenu" class="hidden md:hidden flex-col border-t border-gray-300 bg-[#FAEED4]">
+
+            <a href="/index.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Home
+            </a>
+
+            <a href="/academics.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Academics
+            </a>
+
+            <a href="/library.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Library
+            </a>
+
+            <a href="/computer-course.html"
+                class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Computer Course
+            </a>
+
+            <div class="p-4">
+                <button class="w-full bg-black text-white py-2 rounded hover:[#251901] transition">
+                    <a href="/join-now.html">Join Now</a>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navbar Ends here  -->
+
     <!-- Gallery Section  -->
 
     <section class="relative overflow-hidden bg-gradient-to-br from-[#FAEED4] via-orange-100 to-orange-200 py-24">
@@ -90,7 +182,7 @@
         </div>
 
     </section>
-
+    <script src="/navbar.js"></script>
     <script src="js/galleryHomePage.js"></script>
 </body>
 

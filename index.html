@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/logo-for-a-reason.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -23,47 +24,54 @@
 
     <!-- Navbar Container -->
 
-    <div id="navbar"
-        class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow mb-0 fixed top-0 z-50 w-full">
+    <div id="navbar" class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full">
 
-        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto ">
+        <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto">
 
             <div class="flex items-center justify-between py-3">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-2">
-
-                    <img src="/public/dravidian-campus-logo.png" alt="Dravidian Campus Logo"
-                        class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
-
-                    <h3 class="font-bold text-sm md:text-lg lg:text-xl cursor-pointer">
+                <div class="flex items-center">
+                    <img src="/public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
+                        class="w-10 h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
+                    <h3 class="font-bold text-orange-400 text-sm md:text-lg lg:text-xl cursor-pointer">
                         Dravidian Campus
                     </h3>
-
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-4 lg:gap-8">
 
                     <a href="/index.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
                         Home
                     </a>
 
                     <a href="/academics.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
                         Academics
                     </a>
 
+                    <a href="/computer-course.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Computer Courses
+                    </a>
+
+
                     <a href="/library.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300">
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
                         Library
                     </a>
 
-                    <a href="/computer-course.html"
-                        class="text-sm md:text-base lg:text-lg hover:text-orange-400 transition duration-300 active:bg-orange-300">
-                        Computer Course
+                    <a href="/spoken-english.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Spoken English
                     </a>
+
+
 
                     <button
                         class="bg-[#251901] text-white px-4 py-2 rounded hover:bg-orange-400 transition duration-300 cursor-pointer">
@@ -72,7 +80,6 @@
 
                 </div>
 
-                <!-- Mobile Hamburger -->
                 <button id="menuBtn" class="md:hidden text-3xl font-bold cursor-pointer">
                     ☰
                 </button>
@@ -81,28 +88,28 @@
 
         </nav>
 
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden flex-col border-t border-gray-300 bg-[#FAEED4]">
 
-            <a href="/" class="block p-4 hover:bg-orange-400">
+            <a href="/index.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Home
             </a>
 
-            <a href="/courses.html" class="block p-4 hover:bg-orange-400">
-                Courses
+            <a href="/academics.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
+                Academics
             </a>
 
-            <a href="/library.html" class="block p-4 hover:bg-orange-400">
+            <a href="/library.html" class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Library
             </a>
 
-            <a href="/computer-course.html" class="block p-4 hover:bg-orange-400">
+            <a href="/computer-course.html"
+                class="mobile-nav-link block p-4 hover:bg-orange-400 transition duration-200">
                 Computer Course
             </a>
 
             <div class="p-4">
-                <button class="w-full bg-black text-white py-2 rounded hover:bg-emerald-600 transition">
-                    <a href="join-now.html">Join Now</a>
+                <button class="w-full bg-black text-white py-2 rounded hover:[#251901] transition">
+                    <a href="/join-now.html">Join Now</a>
                 </button>
             </div>
 
@@ -114,47 +121,47 @@
 
     <!-- offers carousel starts here  -->
 
-    <section class="py-16 w-full mt-2 h-[350px] mb-3" id="offersCorousel">
+    <section class="relative w-full md:h-[300px] h-[200px] mt-20 mb-5 overflow-hidden" id="offersCarousel">
+        <div class="w-full md:h-[300px] h-[200px] relative">
 
-        <div class="mx-auto w-full h-[350px]">
-
-            <div class="relative overflow-hidden shadow-2xl w-full">
-
-
-                <div id="offerSlider" class="flex transition-transform duration-700 ease-in-out">
+            <div id="offerSlider"
+                class="flex h-[200px] md:h-[300px] transition-transform duration-700 ease-in-out will-change-transform">
+                <div class="min-w-full w-full h-[300px] bg-gray-200 animate-pulse flex items-center justify-center">
+                    <span class="text-gray-400 font-medium">Loading offers...</span>
                 </div>
-
-
-                <button id="prevBtn" class="absolute left-5 top-1/2 -translate-y-1/2 
-                w-12 h-12 rounded-full bg-white/80 backdrop-blur-lg 
-                shadow-lg flex items-center justify-center 
-                hover:scale-110 transition">
-                    ←
-                </button>
-
-
-                <button id="nextBtn" class="absolute right-5 top-1/2 -translate-y-1/2 
-                w-12 h-12 rounded-full bg-white/80 backdrop-blur-lg 
-                shadow-lg flex items-center justify-center 
-                hover:scale-110 transition">
-                    →
-                </button>
-
-
-                <div id="dots" class="absolute bottom-5 left-1/2 
-                -translate-x-1/2 flex gap-3">
-                </div>
-
             </div>
 
-        </div>
+            <button id="prevBtn" aria-label="Previous Slide" class="absolute left-6 top-1/2 -translate-y-1/2 z-10 
+                   w-12 h-12 rounded-full bg-black/20 backdrop-blur-md border border-white/20
+                   text-white shadow-2xl flex items-center justify-center 
+                   hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <span class="transform group-hover:-translate-x-0.5 transition-transform duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </span>
+            </button>
 
+            <button id="nextBtn" aria-label="Next Slide" class="absolute right-6 top-1/2 -translate-y-1/2 z-10 
+                   w-12 h-12 rounded-full bg-black/20 backdrop-blur-md border border-white/20
+                   text-white shadow-2xl flex items-center justify-center 
+                   hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <span class="transform group-hover:translate-x-0.5 transition-transform duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                    </svg>
+                </span>
+            </button>
+
+            <div id="dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2.5"></div>
+
+        </div>
     </section>
 
     <main>
         <!-- Hero section is here -->
         <section
-            class="relative isolate overflow-hidden min-h-screen rounded-bl-[100px] bg-cover bg-center bg-no-repeat mt-2 md:mt-5"
+            class="relative isolate overflow-hidden min-h-[600px] md:min-h-screen rounded-bl-[100px] bg-cover bg-center bg-no-repeat mt-2 md:mt-5"
             style="background-image: url('public/dravidian-campus.jpg');">
 
             <!-- Shadow black  -->
@@ -228,8 +235,8 @@
                        sm:text-4xl
                        md:text-5xl
                        lg:text-6xl
-                       font-bold
-                       leading-tight
+                       tracking-tight
+                       font-black
                        text-white">
 
                         Not Just Learning,
@@ -266,7 +273,7 @@
                        lg:justify-start
                        gap-4">
 
-                        <button class="bg-emerald-600
+                        <button class="bg-emerald-500
                            text-white
                            px-6
                            py-3
@@ -275,28 +282,81 @@
                            transition
                            cursor-pointer">
 
-                            Get Started
+                            <a href="join-now.html">Get Started</a>
 
                         </button>
 
-                        <button class="border
-                           border-gray-800
+                        <button class="border 
+                           border-orange-500
                            px-6
                            py-3
                            rounded-lg
-                           hover:bg-indigo-700
-                           hover:text-white
+                           hover:text-orange-400
                            transition
-                           bg-rose-700
+                           
                            backdrop-blur-lg
                            shadow-lg
                            text-white
                            cursor-pointer">
 
-                            Learn More
+                            <a href="/about-dravidian-campus.html">
+                                Learn More
+                            </a>
 
                         </button>
 
+
+
+                    </div>
+
+                    <div class="mt-6 md:mt-8 flex flex-col items-center lg:items-start gap-3">
+                        <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">Connect With Our
+                            Campus</span>
+
+                        <!-- Facebook  -->
+
+                        <div class="flex items-center gap-3.5">
+                            <a href="https://www.facebook.com/share/1Cv7xYHmQ3/?mibextid=wwXIfr" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook"
+                                class="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-white/90 transition-all duration-300 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white hover:scale-110 hover:shadow-[0_0_15px_rgba(24,119,242,0.4)]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+                                </svg>
+                            </a>
+
+                            <!-- Instagram  -->
+
+                            <a href="https://www.instagram.com/dravidiancampus?igsh=a3F1cWNxem40NjB4&utm_source=qr"
+                                target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                                class="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-white/90 transition-all duration-300 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:border-[#ee2a7b] hover:text-white hover:scale-110 hover:shadow-[0_0_15px_rgba(238,42,123,0.3)]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.919-.058-1.265-.069-1.646-.069-4.849 0-3.204.012-3.583.069-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4c2.209 0 4 1.79 4 4s-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+
+                            <!-- Telegram  -->
+
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
+                                class="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-white/90 transition-all duration-300 hover:bg-[#26A5E4]/90 hover:border-[#26A5E4] hover:text-white hover:scale-110 hover:shadow-[0_0_15px_rgba(38,165,228,0.4)]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.07-.2-.08-.07-.19-.04-.27-.03-.12.02-1.95 1.24-5.5 3.63-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.35-.49.97-.74 3.79-1.65 6.32-2.74 7.59-3.27 3.6-1.5 4.35-1.76 4.84-1.77.11 0 .35.03.51.16.13.12.17.28.19.39.03.1.03.26.02.39z" />
+                                </svg>
+                            </a>
+
+                            <!-- You Tube  -->
+
+                            <a href="https://youtube.com/@dravidiancampus?si=agOFzFDhC6kpLIs3" target="_blank"
+                                rel="noopener noreferrer" aria-label="YouTube"
+                                class="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-white/90 transition-all duration-300 hover:bg-[#FF0000] hover:border-[#FF0000] hover:text-white hover:scale-110 hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -314,7 +374,7 @@
                    w-full">
 
                     <img src="public/hero.png" alt="Hero Image" class="w-full
-                       max-w-[280px]
+                       min-w-[400px]
                        sm:max-w-[380px]
                        md:max-w-[400px]
                        lg:max-w-[650px]
@@ -323,10 +383,200 @@
 
                 </div>
 
+
+
             </div>
 
         </section>
         <!-- Hero section Ends here -->
+
+
+        <!-- Meet our Toppers Carousel is here  -->
+
+        <section
+            class=" mt-6 md:mt-8 text-black min-h-screen flex flex-col justify-center items-center overflow-x-hidden  py-12">
+
+
+            <div class="text-center mb-12 z-10">
+                <h2 class="text-3xl
+                       text-black
+                       
+                        font-bold
+                     uppercase">
+                    Meet Our <span class="text-orange-500">Toppers</span>
+                </h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 mt-3 text-sm md:text-base">Click on any card to slide and view their
+                    achievements</p>
+            </div>
+
+
+            <!-- Varsha  -->
+
+            <div class="carousel-container relative w-full max-w-5xl h-[480px] flex items-center justify-center">
+                <div id="carouselTrack" class="carousel-track relative w-full h-full flex items-center justify-center">
+
+                    <div
+                        class="carousel-card absolute w-[300px] md:w-[340px] h-[440px] rounded-3xl overflow-hidden flex flex-col transition-all duration-500 ease-out cursor-pointer select-none shadow-2xl bg-white border border-white/10">
+                        <div class="w-full h-[65%] relative bg-gray-800 ">
+                            <img src="public/toppers/varsha_kumari.jpeg" alt="varsha_kumari"
+                                class="w-full h-full object-cover object-top">
+                            <div
+                                class="absolute top-4 right-4 bg-orange-500 text-white font-bold px-3 py-1 rounded-full text-xs shadow-md">
+                                Class 3
+                            </div>
+                        </div>
+                        <div class="w-full h-[35%] bg-white/10 p-5 flex flex-col justify-between text-gray-900">
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight text-gray-900">Varsha Kumari</h3>
+                                <p class="text-sm font-medium text-gray-500 mt-0.5">Science Stream</p>
+                            </div>
+                            <div class="flex items-baseline justify-between border-t border-gray-100 pt-2">
+                                <span class="text-xs font-bold text-gray-400 tracking-wider uppercase">Academic
+                                    Score</span>
+                                <span class="text-xl font-black text-orange-500">99.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Suraj  -->
+
+                    <div
+                        class="carousel-card absolute w-[300px] md:w-[340px] h-[440px] rounded-3xl overflow-hidden flex flex-col transition-all duration-500 ease-out cursor-pointer select-none shadow-2xl bg-white border border-white/10">
+                        <div class="w-full h-[65%] relative bg-gray-800">
+                            <img src="public/toppers/suraj.jpeg" alt="Suraj"
+                                class="w-full h-full object-cover object-top">
+                            <div
+                                class="absolute top-4 right-4 bg-orange-500 text-white font-bold px-3 py-1 rounded-full text-xs shadow-md">
+                                Class 8
+                            </div>
+                        </div>
+                        <div class="w-full h-[35%] bg-white p-5 flex flex-col justify-between text-gray-900">
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight text-gray-900">Suraj</h3>
+                                <p class="text-sm font-medium text-gray-500 mt-0.5">Science Stream</p>
+                            </div>
+                            <div class="flex items-baseline justify-between border-t border-gray-100 pt-2">
+                                <span class="text-xs font-bold text-gray-400 tracking-wider uppercase">Academic
+                                    Score</span>
+                                <span class="text-2xl font-black text-orange-500">88.4%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prachi  -->
+
+                    <div
+                        class="carousel-card absolute w-[300px] md:w-[340px] h-[440px] rounded-3xl overflow-hidden flex flex-col transition-all duration-500 ease-out cursor-pointer select-none shadow-2xl bg-white border border-white/10">
+                        <div class="w-full h-[65%] relative bg-gray-800">
+                            <img src="public/toppers/prachi.jpeg" alt="Priya Patel"
+                                class="w-full h-full object-cover object-top">
+                            <div
+                                class="absolute top-4 right-4 bg-orange-500 text-white font-bold px-3 py-1 rounded-full text-xs shadow-md">
+                                Class 3
+                            </div>
+                        </div>
+                        <div class="w-full h-[35%] bg-white p-5 flex flex-col justify-between text-gray-900">
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight text-gray-900">Prachi</h3>
+                                <p class="text-sm font-medium text-gray-500 mt-0.5">Mujhe Nahin Pata</p>
+                            </div>
+                            <div class="flex items-baseline justify-between border-t border-gray-100 pt-2">
+                                <span class="text-xs font-bold text-gray-400 tracking-wider uppercase">Academic
+                                    Score</span>
+                                <span class="text-2xl font-black text-orange-500">91.8%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="carousel-card absolute w-[300px] md:w-[340px] h-[440px] rounded-3xl overflow-hidden flex flex-col transition-all duration-500 ease-out cursor-pointer select-none shadow-2xl bg-white border border-white/10">
+                        <div class="w-full h-[65%] relative bg-gray-800">
+                            <img src="/public/toppers/naam-me-kya-rakha-hai.jpeg" alt="Rani "
+                                class="w-full h-full object-cover object-top">
+                            <div
+                                class="absolute top-4 right-4 bg-orange-500 text-white font-bold px-3 py-1 rounded-full text-xs shadow-md">
+                                Class 12
+                            </div>
+                        </div>
+                        <div class="w-full h-[35%] bg-white p-5 flex flex-col justify-between text-gray-900">
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight text-gray-900">Rani</h3>
+                                <p class="text-sm font-medium text-gray-500 mt-0.5">Computer Science</p>
+                            </div>
+                            <div class="flex items-baseline justify-between border-t border-gray-100 pt-2">
+                                <span class="text-xs font-bold text-gray-400 tracking-wider uppercase">Academic
+                                    Score</span>
+                                <span class="text-2xl font-black text-orange-500">96.5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="carousel-card absolute w-[300px] md:w-[340px] h-[440px] rounded-3xl overflow-hidden flex flex-col transition-all duration-500 ease-out cursor-pointer select-none shadow-2xl bg-white border border-white/10">
+                        <div class="w-full h-[65%] relative bg-gray-800">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop"
+                                alt="Vikram Singh" class="w-full h-full object-cover">
+                            <div
+                                class="absolute top-4 right-4 bg-orange-500 text-white font-bold px-3 py-1 rounded-full text-xs shadow-md">
+                                Class 10
+                            </div>
+                        </div>
+                        <div class="w-full h-[35%] bg-white p-5 flex flex-col justify-between text-gray-900">
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight text-gray-900">Naam me kya rakha hai (Number
+                                    Dekh)</h3>
+                                <p class="text-sm font-medium text-gray-500 mt-0.5">General Matric</p>
+                            </div>
+                            <div class="flex items-baseline justify-between border-t border-gray-100 pt-2">
+                                <span class="text-xs font-bold text-gray-400 tracking-wider uppercase">Academic
+                                    Score</span>
+                                <span class="text-2xl font-black text-orange-500">95.8%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div
+                class="mt-4 bg-white/10 backdrop-blur-lg border border-white/10 px-4 py-2 rounded-full flex items-center gap-6 shadow-lg z-10">
+                <button id="prevBtnToppers"
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-transparent hover:bg-orange-500 text-white transition-colors duration-300 cursor-pointer">
+                    <span class="material-symbols-outlined text-xl">arrow_back_ios_new</span>
+                </button>
+
+                <div id="dotsContainer" class="flex gap-2"></div>
+
+                <button id="nextBtnToppers"
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-transparent hover:bg-orange-500 text-white transition-colors duration-300 cursor-pointer">
+                    <span class="material-symbols-outlined text-xl">arrow_forward_ios</span>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Meet our Toppers Carousel ends here  -->
+
+        <!-- STATS SECTION -->
+        <section class="py-12 bg-white">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-orange-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition">
+                        <h3 class="text-5xl font-black text-orange-500"> 10+ </h3>
+                        <p class="mt-3 text-gray-600 font-medium"> Professional Courses </p>
+                    </div>
+                    <div class="bg-orange-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition">
+                        <h3 class="text-5xl font-black text-orange-500"> 1000+ </h3>
+                        <p class="mt-3 text-gray-600 font-medium"> Students Guided </p>
+                    </div>
+                    <div class="bg-orange-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition">
+                        <h3 class="text-5xl font-black text-orange-500"> 100% </h3>
+                        <p class="mt-3 text-gray-600 font-medium"> Commitment Towards Success </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- introductory section starts here  -->
         <section class="relative bg-[#1e1a17]/10 min-h-screen overflow-hidden mx-auto mt-10 grid py-5">
@@ -349,28 +599,7 @@
 
                 <!-- Numbers Starts here  -->
 
-                <div class="flex items-center justify-center gap-10 md:gap-16 mb-6 grid grid-cols-1 md:grid-cols-3">
 
-                    <div class="flex flex-col items-center text-center">
-                        <h3 class="text-4xl font-bold text-orange-400">10+</h3>
-                        <p class="mt-1 text-gray-600">Courses</p>
-                    </div>
-
-                    <div class="h-12 w-px bg-gray-300 hidden md:static"></div>
-
-                    <div class="flex flex-col items-center text-center">
-                        <h3 class="text-4xl font-bold text-orange-400">1000+</h3>
-                        <p class="mt-1 text-gray-600">Students</p>
-                    </div>
-
-                    <div class="h-12 w-px bg-gray-300 hidden md:static"></div>
-
-                    <div class="flex flex-col items-center text-center">
-                        <h3 class="text-4xl font-bold text-orange-400">100%</h3>
-                        <p class="mt-1 text-gray-600">Results</p>
-                    </div>
-
-                </div>
 
                 <!-- Numbers Ends here  -->
 
@@ -383,98 +612,140 @@
 
 
                     <!-- Tuition Classes -->
-                    <div
-                        class="flex flex-col p-6 rounded-2xl bg-white/30 backdrop-blur-lg border border-[#FAEED4] shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 scroll-animated">
-                        <img src="icon" alt="Tuition Classes Icon" class="w-12 h-12 mb-4">
-                        <h3 class="font-bold text-xl mb-3">Tuition Classes</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Personalized coaching for school students with a focus on concept clarity, problem solving,
-                            and
-                            academic excellence.
-                        </p>
-                    </div>
+                    <a href="/academics.html"
+                        class="block bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 overflow-hidden shadow-xs hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group scroll-animated">
+
+                        <div class="w-full h-48 overflow-hidden bg-slate-100">
+                            <img src="public/tuition-classes.jpeg" alt="Tuition Classes"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                                Tuition Classes
+                            </h3>
+
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Personalized coaching for school students with a focus on concept clarity, problem
+                                solving, and academic excellence.
+                            </p>
+                        </div>
+                    </a>
 
                     <!-- Computer Classes -->
-                    <div
-                        class="flex flex-col p-6 rounded-2xl bg-white/30 backdrop-blur-lg border border-[#FAEED4] shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300  scroll-animated">
-                        <img src="icon" alt="Computer Classes Icon" class="w-12 h-12 mb-4">
-                        <h3 class="font-bold text-xl mb-3">Computer Classes</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Learn computer fundamentals, MS Office, internet skills, programming basics, and practical
-                            digital literacy.
-                        </p>
-                    </div>
+                    <a href="/computer-course.html"
+                        class="block bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 overflow-hidden shadow-xs hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group scroll-animated">
+
+                        <div class="w-full h-48 overflow-hidden bg-slate-100">
+                            <img src="public/computer-classes-boy.jpeg" alt="Computer Courses"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <div class="p-8">
+                            <h3
+                                class="text-2xl font-bold  text-slate-900 group-hover:text-orange-600 transition-colors">
+                                Computer Courses
+                            </h3>
+
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Learn computer fundamentals, MS Office, internet skills, programming basics, and
+                                practical digital literacy.
+                            </p>
+                        </div>
+                    </a>
 
 
                     <!-- Spoken English -->
-                    <div
-                        class="flex flex-col p-6 rounded-2xl bg-white/30 backdrop-blur-md border border-[#FAEED4] shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 scroll-animated">
-                        <img src="icon" alt="English Speaking Icon" class="w-12 h-12 mb-4">
-                        <h3 class="font-bold text-xl mb-3">Spoken English</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Improve grammar, vocabulary, pronunciation, and communication skills through interactive
-                            speaking practice.
-                        </p>
-                    </div>
+                    <a href="/spoken-english.html"
+                        class="block bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 overflow-hidden shadow-xs hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group scroll-animated">
+
+                        <div class="w-full h-48 overflow-hidden bg-slate-100">
+                            <img src="public/spoken-english.jpeg" alt="Spoken English Classes"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 object-top">
+                        </div>
+
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                                Spoken English
+                            </h3>
+
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Improve grammar, vocabulary, pronunciation, and communication skills through interactive
+                                speaking practice.
+                            </p>
+                        </div>
+                    </a>
 
 
                     <!-- Competitive Exam -->
-                    <div
-                        class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/30 backdrop-blur-lg border border-[#FAEED4] shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 scroll-animated">
-                        <img src="icon" alt="Competitive Exam Icon" class="w-12 h-12 mb-4">
-                        <h3 class="font-bold text-xl mb-3">Competitive Exam</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Expert guidance and structured preparation for SSC, Banking, Railway, Defence, and other
-                            competitive examinations.
-                        </p>
-                    </div>
+                    <a href="/competitive-exams.html"
+                        class="block bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 overflow-hidden shadow-xs hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group scroll-animated">
+
+                        <div class="w-full h-48 overflow-hidden bg-slate-100">
+                            <img src="public/competetive-exam.jpeg" alt="Competitive Exam Preparation"
+                                class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <div class="p-8 text-left">
+                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                                Competitive Exam
+                            </h3>
+
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Expert guidance and structured preparation for SSC, Banking, Railway, Defence, and other
+                                competitive examinations.
+                            </p>
+                        </div>
+                    </a>
 
                     <!-- Board Exam -->
-                    <div
-                        class="flex flex-col p-6 rounded-2xl bg-white/30 backdrop-blur-md border border-[#FAEED4] shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 scroll-animated">
-                        <img src="icon" alt="Board Exam Icon" class="w-12 h-12 mb-4">
-                        <h3 class="font-bold text-xl mb-3">Career Counseling</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Comprehensive preparation for CBSE and State Board examinations with regular tests, doubt
-                            sessions, and revision plans.
-                        </p>
-                    </div>
+                    <a href="/career-counseling.html"
+                        class="block bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 overflow-hidden shadow-xs hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group scroll-animated">
+
+                        <div class="w-full h-48 overflow-hidden bg-slate-100">
+                            <img src="public/career-counseling.jpeg" alt="Career Counseling"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <div class="p-8 text-left">
+                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                                Career Counseling
+                            </h3>
+
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Comprehensive preparation for CBSE and State Board examinations with regular tests,
+                                doubt sessions, and revision plans.
+                            </p>
+                        </div>
+                    </a>
 
 
 
 
                     <!-- Digital Library -->
-                    <div
-                        class="flex flex-col p-6 rounded-2xl bg-white/30 backdrop-blur-md border border-[#FAEED4] shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 scroll-animated">
-                        <img src="icon" alt="Digital Library Icon" class="w-12 h-12 mb-4">
-                        <h3 class="font-bold text-xl mb-3">Digital Library</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Study in a peaceful environment with access to digital resources, reference materials, and
-                            high-speed internet.
-                        </p>
-                    </div>
+                    <a href="/library.html"
+                        class="block bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 overflow-hidden shadow-xs hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group scroll-animated">
+
+                        <div class="w-full h-48 overflow-hidden bg-slate-100">
+                            <img src="public/digital-library.jpeg" alt="Digital Library"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <div class="p-8 text-left">
+                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                                Digital Library
+                            </h3>
+
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Study in a peaceful environment with access to digital resources, reference materials,
+                                and high-speed internet.
+                            </p>
+                        </div>
+                    </a>
 
                 </div>
 
-                <!-- Why Choose Us  -->
 
-                <div class="z-20 mt-5">
-                    <div class="flex justify-center items-center mb-7">
-                        <h2 class="text-lg font-bold text-gray-900">Why Choose Dravidian Campus ?</h2>
-                    </div>
-
-                    <p class="text-gray-600 tex">At Dravidian Campus, we believe that success comes from the right
-                        guidance,
-                        consistent practice, and
-                        a focused learning environment. Our experienced faculty members provide personalized attention
-                        to
-                        every student, ensuring that concepts are understood clearly and confidence grows steadily.
-
-                        Whether you are preparing for board examinations, competitive exams, improving your English
-                        communication skills, or learning computer applications, we offer structured courses designed to
-                        help you achieve your goals.
-                    </p>
-                </div>
 
             </div>
         </section>
@@ -564,6 +835,161 @@
 
         </section>
         <!-- Meet our Expert teachers ends here  -->
+
+
+        <!-- WHY CHOOSE DRAVIDIAN CAMPUS -->
+
+        <section class="py-24 bg-gradient-to-br from-orange-50 via-white to-orange-50">
+
+            <div class="max-w-7xl mx-auto px-5">
+
+                <div class="text-center mb-16">
+
+                    <span
+                        class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold tracking-wide">
+
+                        WHY STUDENTS CHOOSE US
+
+                    </span>
+
+                    <h2 class="mt-6 text-3xl md:text-4xl font-bold text-gray-900">
+
+                        Learn Smarter. Grow Faster.
+
+                    </h2>
+
+                    <p class="max-w-3xl mx-auto mt-6 text-lg text-gray-600 leading-relaxed">
+
+                        Dravidian Campus combines experienced faculty, structured learning,
+                        practical skill development, and a focused study environment to
+                        help students achieve academic excellence and career success.
+
+                    </p>
+
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Card -->
+
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-orange-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                        <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+
+                            <span class="material-symbols-outlined text-orange-500">
+                                person_shield
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+
+                            Expert Faculty
+
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+
+                            Learn from experienced educators dedicated to helping every
+                            student succeed.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card -->
+
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-orange-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                        <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+
+                            <span class="material-symbols-outlined text-orange-500">
+                                auto_stories
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+
+                            Structured Courses
+
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+
+                            Well-planned programs designed to build strong concepts and
+                            deliver measurable results.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card -->
+
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-orange-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                        <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+
+                            <span class="material-symbols-outlined text-orange-500">
+                                library_books
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+
+                            Library Facility
+
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+
+                            A calm and disciplined environment that encourages focused
+                            study and consistent progress.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card -->
+
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-orange-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                        <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+
+                            <span class="material-symbols-outlined text-orange-500">
+                                business_center
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+
+                            Career Development
+
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+
+                            Build communication skills, confidence, technical expertise,
+                            and professional readiness.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Why Choose us ends here  -->
 
         <!-- Student Testimonials Starts here  -->
         <section class="py-20 bg-gray-100">
@@ -864,7 +1290,7 @@
                                 class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
 
                             <button type="submit"
-                                class=" bg-emerald-600 w-[30%] text-white py-4 rounded-xl hover:bg-orange-400 transition duration-300 cursor-pointer">
+                                class=" bg-[#251901] w-[30%] text-white py-4 rounded-xl hover:bg-orange-400 transition duration-300 cursor-pointer">
 
                                 Send Message
 
@@ -884,184 +1310,183 @@
     </main>
 
     <!-- Footer Starts here  -->
-    <footer class="bg-[#251901] text-white">
-
+    <footer class="bg-[#251901] text-white font-sans">
         <div class="max-w-7xl mx-auto px-6 py-16">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                <!-- Brand -->
-                <div>
-
+                <div class="lg:col-span-1">
                     <div class="flex items-center gap-3">
-
-                        <img src="public/logo.png" alt="Dravidian Campus Logo"
+                        <img src="public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
                             class="w-12 h-12 rounded-full object-cover">
-
-                        <h3 class="text-2xl font-bold">
-                            Dravidian Campus
-                        </h3>
-
+                        <h3 class="text-2xl font-bold tracking-tight">Dravidian Campus</h3>
                     </div>
-
-                    <p class="mt-5 text-gray-400 leading-relaxed">
-                        Empowering students through quality education,
-                        expert mentorship, and a focused learning
+                    <p class="mt-5 text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Empowering students through quality education, expert mentorship, and a focused learning
                         environment.
                     </p>
-
                 </div>
 
-                <!-- Quick Links -->
                 <div>
-
-                    <h4 class="text-lg font-semibold mb-5">
+                    <h4
+                        class="text-lg font-semibold mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[2px] after:bg-orange-500">
                         Quick Links
                     </h4>
-
-                    <ul class="space-y-3 text-gray-400">
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Home
-                            </a>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="/" class="hover:text-orange-400 transition-colors duration-200">Home</a></li>
+                        <li><a href="/academics.html"
+                                class="hover:text-orange-400 transition-colors duration-200">Academics</a></li>
+                        <li class="hover:text-gray-300 transition-colors hover:text-orange-400 transition-colors"><a
+                                href="computer-course.html">Computer
+                                Courses</a></li>
+                        <li><a href="/library.html"
+                                class="hover:text-orange-400 transition-colors duration-200">Library</a></li>
+                        <li><a href="/about-dravidian-campus.html"
+                                class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
+                        <li><a href="/" class="hover:text-orange-400 transition-colors duration-200">Contact</a></li>
+                        <li><a href="/admin/login.html"
+                                class="hover:text-orange-400 transition-colors duration-200">Admin Login</a>
                         </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Courses
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Library
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                About Us
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Contact
-                            </a>
-                        </li>
-
                     </ul>
-
                 </div>
 
-                <!-- Programs -->
                 <div>
-
-                    <h4 class="text-lg font-semibold mb-5">
+                    <h4
+                        class="text-lg font-semibold mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[2px] after:bg-orange-500">
                         Our Programs
                     </h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
 
-                    <ul class="space-y-3 text-gray-400">
+                        <li class="hover:text-gray-300 transition-colors"> <a href=""> Tuition Classes</a>
+                        </li>
+                        <li class="hover:text-gray-300 transition-colors"><a href="/computer-course.html">Computer
+                                Courses</a></li>
+                        <li class="hover:text-gray-300 transition-colors"><a href="/spoken-english.html">Spoken
+                                English</a></li>
 
-                        <li>Competitive Exams</li>
+                        <li class="hover:text-gray-300 transition-colors"><a href="/competetive-exams.html">Competitive
+                                Exams</a></li>
 
-                        <li>Tuition Classes</li>
-
-                        <li>Board Exam Preparation</li>
-
-                        <li>Computer Courses</li>
-
-                        <li>English Speaking</li>
-
-                        <li>Digital Library</li>
-
+                        <li class="hover:text-gray-300 transition-colors"><a href="/library.html">Digital Library</a>
+                        </li>
                     </ul>
-
                 </div>
 
-                <!-- Contact -->
-                <div>
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h4
+                            class="text-lg font-semibold mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[2px] after:bg-orange-500">
+                            Contact Information
+                        </h4>
+                        <div class="space-y-3.5 text-sm text-gray-400">
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">add_call</span>
+                                +91 7052291092
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">mail</span>
+                                info@dravidiancampus.com
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">location_on</span>
+                                Address Line, City
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">schedule</span>
+                                Mon - Sat: 8 AM - 8 PM
+                            </p>
+                        </div>
+                    </div>
 
-                    <h4 class="text-lg font-semibold mb-5">
-                        Contact Information
-                    </h4>
+                    <div class="mt-10 lg:mt-6">
 
-                    <div class="space-y-4 text-gray-400">
+                        <span class="text-xs font-semibold text-orange-400 uppercase tracking-[0.25em] block mb-5">
+                            Connect With Us
+                        </span>
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                add_call
-                            </span>
-                            +91 XXXXX XXXXX
-                        </p>
+                        <div class="flex items-center gap-4 flex-wrap">
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                mail
-                            </span> info@dravidiancampus.com
-                        </p>
+                            <!-- Instagram -->
+                            <a href="#" aria-label="Instagram"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-500/30 hover:border-pink-500">
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                location_on
-                            </span> Address
-                        </p>
+                                <div
+                                    class="absolute inset-0  opacity-0 group-hover:opacity-100 transition duration-300">
+                                </div>
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                schedule
-                            </span> Mon - Sat: 8 AM - 8 PM
+                                <img src="public/instagram.png" alt="Instagram"
+                                    class="relative z-10 w-full h-ful  transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="#" aria-label="Facebook"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30 hover:border-blue-500">
+
+                                <div
+                                    class="absolute inset-0  opacity-0 group-hover:opacity-100 transition duration-300">
+                                </div>
+
+                                <img src="public/facebook.png" alt="Facebook"
+                                    class="relative z-10 w-full h-full transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                            <!-- YouTube -->
+                            <a href="#" aria-label="YouTube"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-red-500/30 hover:border-red-500">
+
+                                <div
+                                    class="absolute inset-0  opacity-0 group-hover:opacity-100 transition duration-300">
+                                </div>
+
+                                <img src="public/youtube.png" alt="YouTube"
+                                    class="relative z-10 w-full h-full   transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                            <!-- Telegram -->
+                            <a href="#" aria-label="Telegram"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/30 hover:border-cyan-500">
+
+                                <div class="absolute inset-0  group-hover:opacity-100 transition duration-300">
+                                </div>
+
+                                <img src="public/telegram.png" alt="Telegram"
+                                    class="relative z-10 w-full h-full   transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                        </div>
+
+                        <p class="text-xs text-zinc-400 mt-4 leading-relaxed max-w-sm">
+                            Stay connected with Dravidian Campus for updates, exam alerts,
+                            admission announcements and educational content.
                         </p>
 
                     </div>
+
 
                 </div>
 
             </div>
 
-            <!-- Divider -->
-            <div class="border-t border-gray-800 mt-12 pt-8">
-
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-
-                    <p class="text-gray-500 text-center md:text-left">
-                        © 2026 Dravidian Campus. All Rights Reserved.
+            <div class="border-t border-white/10 mt-16 pt-8">
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-500">
+                    <p class="text-center sm:text-left " id="copyright">
+                        &copy; 2026 Dravidian Campus. All Rights Reserved.
                     </p>
-
-                    <!-- Social Links -->
-                    <div class="flex items-center gap-5 text-2xl">
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/instagram.png" alt="dravidian campus instagram" srcset="">
-                        </a>
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/facebook.png" alt="dravidian campus facebook">
-                        </a>
-
-
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/youtube.png" alt="dravidian campus youtube">
-                        </a>
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/telegram.png" alt="dravidian campus telegram">
-                        </a>
-
-                    </div>
-
+                    <p class="text-center sm:text-right tracking-wide">
+                        Developed & Maintained by <a href="https://ankityadavwebdev.netlify.app/"
+                            class="text-orange-400/90 hover:text-orange-400 font-semibold transition-colors duration-200">Ankit
+                            Yadav</a>
+                    </p>
                 </div>
-
             </div>
 
         </div>
-
     </footer>
     <!-- Footer Ends here  -->
-    <script src="/index.js"></script>
+    <script src="/navbar.js"></script>
     <script src="js/offers.js"></script>
+    <script src="js/toppersCarousel.js"></script>
     <script src="js/galleryHomePage.js"></script>
 
 
