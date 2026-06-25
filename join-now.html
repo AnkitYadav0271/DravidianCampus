@@ -11,9 +11,6 @@
 
 <body class="bg-gray-100">
 
-    <!-- Navbar Container -->
-
-    
     <div id="navbar" class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full">
 
         <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto">
@@ -101,19 +98,16 @@
 
     </div>
 
-    <!-- Navbar Ends here  -->
-
-    <!-- Form Starts here  -->
-    <section class="py-16 bg-gray-100 mt-5">
+    <section class="py-24 bg-gray-50 mt-10">
         <div class="max-w-4xl mx-auto px-4">
 
-            <!-- Heading -->
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#251901]">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-widest font-bold text-orange-500 bg-orange-100 px-3 py-1 rounded-full">Enrollment Form</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#251901] mt-3">
                     Join Our Courses
                 </h2>
 
-                <p class="mt-3 text-gray-600">
+                <p class="mt-3 text-gray-600 max-w-md mx-auto">
                     Fill out the form below and our team will contact you shortly.
                 </p>
             </div>
@@ -124,139 +118,153 @@
 
             </div>
 
-            <!-- Form Card -->
-            <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10">
+            <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 md:p-10 transition duration-300 hover:shadow-orange-200/40">
 
 
 
                 <form action="/" id="newAdmission" method="post" class="space-y-6">
 
-                    <!-- Name + Email -->
                     <div class="grid md:grid-cols-2 gap-6">
 
                         <div>
-                            <label class="block mb-2 font-medium text-gray-700">
+                            <label class="block mb-2 text-sm font-semibold text-gray-700 tracking-wide">
                                 Full Name
                             </label>
 
-                            <input type="text" name="fullName" placeholder="Enter your name"
-                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
-                            <p id="nameError" class="text-red-500 text-sm"></p>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl">person</span>
+                                <input type="text" name="fullName" placeholder="Enter your name"
+                                    class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 placeholder:text-gray-400 text-gray-800">
+                            </div>
+                            <p id="nameError" class="text-red-500 text-xs mt-1 font-medium"></p>
                         </div>
 
                         <div>
-                            <label class="block mb-2 font-medium text-gray-700">
+                            <label class="block mb-2 text-sm font-semibold text-gray-700 tracking-wide">
                                 Email Address (Optional)
                             </label>
 
-                            <input type="email" name="email" placeholder="Enter your email"
-                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
-                            <p id="emailError" class="text-red-500 text-sm mt-1"></p>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl">mail</span>
+                                <input type="email" name="email" placeholder="Enter your email"
+                                    class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 placeholder:text-gray-400 text-gray-800">
+                            </div>
+                            <p id="emailError" class="text-red-500 text-xs mt-1 font-medium"></p>
                         </div>
 
                     </div>
 
-                    <!-- Phone + Course -->
                     <div class="grid md:grid-cols-2 gap-6">
 
                         <div>
-                            <label class="block mb-2 font-medium text-gray-700">
+                            <label class="block mb-2 text-sm font-semibold text-gray-700 tracking-wide">
                                 Phone Number
                             </label>
 
-                            <input type="tel" name="phoneNo" placeholder="Enter phone number"
-                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
-                            <p id="phoneError" class="text-red-500 text-sm"></p>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl">call</span>
+                                <input type="tel" name="phoneNo" placeholder="Enter phone number"
+                                    class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 placeholder:text-gray-400 text-gray-800">
+                            </div>
+                            <p id="phoneError" class="text-red-500 text-xs mt-1 font-medium"></p>
                         </div>
 
                         <div>
-                            <label class="block mb-2 font-medium text-gray-700">
+                            <label class="block mb-2 text-sm font-semibold text-gray-700 tracking-wide">
                                 Select Course
                             </label>
 
-                            <select name="course"
-                                class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl pointer-events-none">school</span>
+                                <select name="course"
+                                    class="w-full pl-12 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 text-gray-700 appearance-none cursor-pointer">
 
-                                <option selected disabled>
-                                    Choose a Course
-                                </option>
+                                    <option selected disabled class="text-gray-400">
+                                        Choose a Course
+                                    </option>
 
-                                <option value="Class 10">
-                                    Class 10
-                                </option>
+                                    <option value="Class 10" class="text-gray-800">
+                                        Class 10
+                                    </option>
 
-                                <option value="Class 12 Science">
-                                    Class 12 (Science)
-                                </option>
-
-
-
-                                <option value="Class 12 Arts">Class 12 (Arts)</option>
-                                <option value="Class 12 Commerce">Class 12 (Commerce)</option>
-                                <option value="Class 11 Arts">Class 11 (Arts)</option>
-                                <option value="Class 11 Science">Class 11 (Science)</option>
-                                <option value="Class 11 Commerce">Class 11 (Commerce)</option>
-
-                                <option value="Class 1">
-                                    Class 1
-                                </option>
-
-                                <option value="Class 2">Class 2</option>
-                                <option value="Class 3">Class 3</option>
-                                <option value="Class 4">Class 4</option>
-                                <option value="Class 5">Class 5</option>
-                                <option value="Class 6">Class 6</option>
-                                <option value="Class 7">Class 7</option>
-                                <option value="Class 8">Class 8</option>
-                                <option value="Class 9">Class 9</option>
-
-
-                                <option value="Library">
-                                    Digital Library
-                                </option>
+                                    <option value="Class 12 Science" class="text-gray-800">
+                                        Class 12 (Science)
+                                    </option>
 
 
 
+                                    <option value="Class 12 Arts" class="text-gray-800">Class 12 (Arts)</option>
+                                    <option value="Class 12 Commerce" class="text-gray-800">Class 12 (Commerce)</option>
+                                    <option value="Class 11 Arts" class="text-gray-800">Class 11 (Arts)</option>
+                                    <option value="Class 11 Science" class="text-gray-800">Class 11 (Science)</option>
+                                    <option value="Class 11 Commerce" class="text-gray-800">Class 11 (Commerce)</option>
+
+                                    <option value="Class 1" class="text-gray-800">
+                                        Class 1
+                                    </option>
+
+                                    <option value="Class 2" class="text-gray-800">Class 2</option>
+                                    <option value="Class 3" class="text-gray-800">Class 3</option>
+                                    <option value="Class 4" class="text-gray-800">Class 4</option>
+                                    <option value="Class 5" class="text-gray-800">Class 5</option>
+                                    <option value="Class 6" class="text-gray-800">Class 6</option>
+                                    <option value="Class 7" class="text-gray-800">Class 7</option>
+                                    <option value="Class 8" class="text-gray-800">Class 8</option>
+                                    <option value="Class 9" class="text-gray-800">Class 9</option>
 
 
-                                <option value="Computer">
-                                    Computer Classes
-                                </option>
+                                    <option value="Library" class="text-gray-800">
+                                        Digital Library
+                                    </option>
 
-                                <option value="English">
-                                    English Speaking
-                                </option>
 
-                                <option value="Competitive">
-                                    Govt & Entrance Exam Preparation
-                                </option>
 
-                                <option value="PG">
-                                    PG
-                                </option>
 
-                            </select>
+
+                                    <option value="Computer" class="text-gray-800">
+                                        Computer Classes
+                                    </option>
+
+                                    <option value="English" class="text-gray-800">
+                                        English Speaking
+                                    </option>
+
+                                    <option value="Competitive" class="text-gray-800">
+                                        Govt & Entrance Exam Preparation
+                                    </option>
+
+                                    <option value="PG" class="text-gray-800">
+                                        PG
+                                    </option>
+
+                                </select>
+                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl pointer-events-none">expand_more</span>
+                            </div>
                         </div>
 
                     </div>
 
-                    <!-- Message -->
                     <div>
-                        <label class="block mb-2 font-medium text-gray-700">
+                        <label class="block mb-2 text-sm font-semibold text-gray-700 tracking-wide">
                             Message (Optional)
                         </label>
 
-                        <textarea rows="5" name="message" placeholder="Tell us about your requirements..."
-                            class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"></textarea>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-4 text-gray-400 text-xl">chat_bubble</span>
+                            <textarea rows="5" name="message" placeholder="Tell us about your requirements..."
+                                class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 resize-none text-gray-800 placeholder:text-gray-400"></textarea>
+                        </div>
                     </div>
 
-                    <!-- Button -->
-                    <button type="submit"
-                        class="w-[30%] bg-[#251901] text-white py-4 rounded-xl font-medium text-lg hover:bg-orange-500 transition duration-300 cursor-pointer">
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="w-full md:w-[35%] lg:w-[30%] py-4 bg-[#251901] text-white rounded-xl font-semibold text-base shadow-lg shadow-black/10 hover:bg-orange-500 hover:shadow-orange-500/20 active:scale-[0.98] transition duration-300 cursor-pointer flex items-center justify-center gap-2">
 
-                        Send Inquiry
+                            Send Inquiry
+                            <span class="material-symbols-outlined text-lg">send</span>
 
-                    </button>
+                        </button>
+                    </div>
 
                 </form>
 
@@ -265,20 +273,12 @@
         </div>
     </section>
 
-    <!-- Form Ends here  -->
-
-
-    <!-- Footer Starts Here  -->
-
-
-
     <footer class="bg-[#251901] text-white">
 
         <div class="max-w-7xl mx-auto px-6 py-16">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                <!-- Brand -->
                 <div>
 
                     <div class="flex items-center gap-3">
@@ -300,7 +300,6 @@
 
                 </div>
 
-                <!-- Quick Links -->
                 <div>
 
                     <h4 class="text-lg font-semibold mb-5">
@@ -343,7 +342,6 @@
 
                 </div>
 
-                <!-- Programs -->
                 <div>
 
                     <h4 class="text-lg font-semibold mb-5">
@@ -368,7 +366,6 @@
 
                 </div>
 
-                <!-- Contact -->
                 <div>
 
                     <h4 class="text-lg font-semibold mb-5">
@@ -408,7 +405,6 @@
 
             </div>
 
-            <!-- Divider -->
             <div class="border-t border-gray-800 mt-12 pt-8">
 
                 <div class="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -417,7 +413,6 @@
                         © 2026 Dravidian Campus. All Rights Reserved.
                     </p>
 
-                    <!-- Social Links -->
                     <div class="flex items-center gap-5 text-2xl">
 
                         <a href="#" class="hover:text-orange-400 transition">
@@ -450,6 +445,5 @@
     <script src="/navbar.js"></script>
     <script src="formValidation.js"></script>
 
-    <!-- Footer Ends here  -->
-
-</body>
+    </body>
+</html>
