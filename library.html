@@ -24,7 +24,7 @@
                 <div class="flex items-center">
                     <img src="/public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
                         class="w-10 h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded object-contain cursor-pointer">
-                    <h3 class="font-bold text-orange-400 text-sm md:text-lg lg:text-xl cursor-pointer">
+                    <h3 class="font-bold text-orange-600 text-sm md:text-lg lg:text-xl cursor-pointer">
                         Dravidian Campus
                     </h3>
                 </div>
@@ -54,6 +54,12 @@
                         class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
                            after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
                         Library
+                    </a>
+
+                    <a href="/spoken-english.html"
+                        class="nav-link relative text-sm md:text-base lg:text-lg text-gray-800 hover:text-orange-400 transition duration-300 py-1
+                           after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300">
+                        Spoken English
                     </a>
 
 
@@ -104,586 +110,579 @@
 
     <!-- Navbar Ends here  -->
 
-    <main>
+    <main class="pt-20">
 
-        <!-- Library hero Section  -->
-        <section class="relative bg-[#FAEED4] py-24">
+        <section
+            class="relative bg-gradient-to-b from-[#FAEED4] via-[#FAEED4]/40 to-stone-50 py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6 text-center lg:text-left z-10">
+                    <span
+                        class="inline-flex items-center gap-1.5 bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-orange-500"></span> Seats Booking Open
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-none">
+                        Zero Distractions. <span class="text-orange-600">Better Results.</span>
+                    </h1>
+                    <p class="text-stone-600 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        A quiet, disciplined library made for school, board exams, and competitive test preparation.
+                        Book your own permanent seat today to study comfortably alongside hard-working students.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="/join-library.html"
+                            class="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-orange-600/20 hover:bg-orange-700 transition duration-300 text-center">
+                            Book Your Seat
+                        </a>
+                        <a href="#amenities"
+                            class="bg-white text-stone-800 border border-stone-200 px-8 py-4 rounded-2xl font-semibold shadow-sm hover:bg-stone-50 transition duration-300 text-center">
+                            See Facilities
+                        </a>
+                    </div>
+                </div>
 
+                <div class="lg:col-span-7 grid grid-cols-12 gap-4 relative">
+                    <div class="col-span-7 space-y-4">
+                        <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+                            <img src="public/dravidian-campus-library.JPG" alt="Library Seating"
+                                class="w-full h-64 md:h-80 object-cover group-hover:scale-102 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                                <span class="text-orange-600 text-xs font-bold uppercase tracking-wider">Quiet
+                                    Area</span>
+                                <p class="text-white font-bold text-lg">Reserved Individual Seats</p>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+                            <img src="public/dravidian-campus-library-books.JPG"
+                                alt="Books"
+                                class="w-full h-44 object-cover group-hover:scale-102 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-4 flex flex-col justify-end">
+                                <span class="text-orange-600 text-xs font-bold uppercase tracking-wider">Books &
+                                    Guides</span>
+                                <p class="text-white font-bold">Exam Guides & Reference Books</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-5 space-y-4 pt-8">
+                        <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+                            <img src="public/dravidian-campus-what-to-say.JPG"
+                                alt="WiFi"
+                                class="w-full h-44 object-cover group-hover:scale-102 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-4 flex flex-col justify-end">
+                                <span class="text-orange-600 text-xs font-bold uppercase tracking-wider">Internet</span>
+                                <p class="text-white font-bold">High-Speed WiFi for Online Classes</p>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+                            <img src="public/dravidian-campus-library-sheets.JPG"
+                                alt="Students"
+                                class="w-full h-64 md:h-80 object-cover group-hover:scale-102 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                                <span
+                                    class="text-orange-600 text-xs font-bold uppercase tracking-wider">Environment</span>
+                                <p class="text-white font-bold text-base">Study with Focused Peers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section  -->
+
+        <section id="amenities" class="py-20 bg-stone-100">
             <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-orange-100 text-orange-600 font-bold text-xs uppercase tracking-widest">
+                        Everything You Need
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900 mt-3">Built for Serious Daily Study</h2>
+                    <p class="text-stone-600 mt-3 text-base">We take away all distractions so you can focus completely
+                        on your syllabus and scoring well.</p>
+                </div>
 
-                <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Expanded Grid to 8 items to fit all features from photo_2026-07-02_11-15-20.jpg -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    <div>
-
-                        <span class="bg-orange-100 text-orange-500 px-4 py-2 rounded-full">
-                            Digital Library
-                        </span>
-
-                        <h1 class="mt-6 text-5xl font-bold">
-                            A Peaceful Place To Focus And Succeed
-                        </h1>
-
-                        <p class="mt-6 text-gray-700 text-lg">
-                            Study in a calm and productive environment with
-                            comfortable seating, WiFi, charging points,
-                            and flexible membership plans.
-                        </p>
-
+                    <!-- 1. Pin-Drop Silence -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">voice_over_off</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">Pin-Drop Silence</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">A strictly monitored silent and studious
+                            zone. No phone calls or talking allowed inside the lab.</p>
                     </div>
 
-                    <div>
+                    <!-- 2. Fully Air Conditioned (New) -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">ac_unit</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">Fully Air Conditioned</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">Beat the heat and study comfortably with
+                            our premium commercial AC setup running continuously.</p>
+                    </div>
 
-                        <img id="libraryImage" src="public/library1.jpeg"
-                            class="rounded-3xl shadow-xl w-full h-[450px] object-cover">
+                    <!-- 3. Reserved Seats & Lockers (New) -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">lock</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">Seats with Lockers</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">Get your own dedicated reserved desk
+                            space with a secure personal locker attached to keep your notes safe.</p>
+                    </div>
 
+                    <!-- 4. 24x7 Round-the-Clock Access (New) -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">schedule</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">24x7 Open Access</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">Early bird or a late-night scanner? Study
+                            whenever inspiration strikes with non-stop round-the-clock facility access.</p>
+                    </div>
+
+                    <!-- 5. Fast WiFi for Lessons -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">wifi</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">High-Speed Internet</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">High-speed optical fiber internet to
+                            stream educational videos, online coaching classes, and live test modules without buffer.
+                        </p>
+                    </div>
+
+                    <!-- 6. RO Purified Hot & Cold Water (Updated) -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">water_drop</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">RO Water Facility</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">Stay refreshed and dynamic with advanced
+                            RO filtered drinking water available in Hot, Cold, and Normal temperature nodes.</p>
+                    </div>
+
+                    <!-- 7. Newspapers & Magazines (New) -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">newspaper</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">Daily Reads & Magazines</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">Keep up with current affairs via daily
+                            newspapers (both Hindi & English editions) and curated monthly knowledge magazines.</p>
+                    </div>
+
+                    <!-- 8. Reference Books -->
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined font-bold">menu_book</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">Reference Books</h3>
+                        <p class="text-stone-600 mt-2 text-sm leading-relaxed">Free on-premise access to core textbooks,
+                            detailed course guides, and previous years' exam competitive question banks.</p>
                     </div>
 
                 </div>
-
             </div>
-
         </section>
 
-        <!-- Library hero section ends here  -->
-
-        <!-- Features of Library  -->
-        <!-- Features & Pricing Section -->
-        <section class="relative bg-gray-100 overflow-hidden py-20">
-
-            <!-- Decorative Blur (Always Behind Everything) -->
-            <div class="absolute
-        -bottom-24
-        -left-40
-        w-[800px]
-        h-[500px]
-        bg-orange-300
-        rounded-full
-        blur-3xl
-        opacity-60
-        z-0">
-            </div>
-
-            <!-- All Content -->
-            <div class="relative z-10">
-
-                <!-- Facilities -->
-                <div class="max-w-7xl mx-auto px-6">
-
-                    <div class="text-center mb-14">
-
-                        <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-500">
-                            Study Facilities
-                        </span>
-
-                        <h2 class="mt-4 text-4xl md:text-5xl font-bold">
-                            Everything You Need To Study Better
-                        </h2>
-
-                        <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                            Designed for students preparing for board exams,
-                            competitive exams, and professional certifications.
-                        </p>
-
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                        <!-- Card -->
-                        <div class="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-orange-400">
-                                    voice_over_off
-                                </span>
-
-                                <h3 class="font-bold text-xl">
-                                    Quiet Environment
-                                </h3>
-                            </div>
-
-
-                            <p class="mt-3 text-gray-600">
-                                A peaceful atmosphere that helps you stay focused
-                                and productive throughout your study sessions.
-                            </p>
-
-                        </div>
-
-                        <!-- Card -->
-                        <div class="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-                            <div class="flex items-center gap-3">
-
-                                <span class="material-symbols-outlined text-orange-400">
-                                    wifi
-                                </span>
-
-                                <h3 class="font-bold text-xl">
-                                    High-Speed WiFi
-                                </h3>
-                            </div>
-
-
-                            <p class="mt-3 text-gray-600">
-                                Fast and reliable internet access for online
-                                classes, research, and mock tests.
-                            </p>
-
-                        </div>
-
-                        <!-- Card -->
-                        <div class="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-                            <div class="flex items-center gap-3">
-
-                                <span class="material-symbols-outlined text-orange-400">
-                                    desk
-                                </span>
-                                <h3 class="font-bold text-xl">
-                                    Individual Desks
-                                </h3>
-
-                            </div>
-
-                            <p class="mt-3 text-gray-600">
-                                Comfortable seating and dedicated study desks
-                                designed for long study hours.
-                            </p>
-
-                        </div>
-
-                        <!-- Card -->
-                        <div class="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-orange-400">
-                                    power_settings_new
-                                </span>
-                                <h3 class="font-bold text-xl">
-                                    Power Backup
-                                </h3>
-                            </div>
-
-                            <p class="mt-3 text-gray-600">
-                                Uninterrupted study experience with reliable
-                                power backup facilities.
-                            </p>
-
-                        </div>
-
-                    </div>
-
+        <section id="pricing" class="py-20 bg-stone-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-orange-100 text-orange-600 font-bold text-xs uppercase tracking-widest">Simple
+                        Plans</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900 mt-3">Choose Your Daily Study Shift</h2>
+                    <p class="text-stone-600 mt-3 text-base">Low monthly fees designed specifically to help students
+                        stay budget-friendly.</p>
                 </div>
 
-                <!-- Pricing -->
-                <div class="max-w-7xl mx-auto px-6 mt-24">
+                <!-- Pricing starts here  -->
 
-                    <div class="text-center mb-12">
-
-                        <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-500">
-                            Membership Plans
-                        </span>
-
-                        <h2 class="mt-4 text-4xl md:text-5xl font-bold">
-                            Choose Your Study Plan
-                        </h2>
-
-                        <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                            Flexible and affordable plans designed for every
-                            type of learner.
-                        </p>
-
-                    </div>
-
-                    <div class="overflow-x-auto">
-
-                        <div class="overflow-x-auto">
-
-                            <table
-                                class="w-full border-separate border-spacing-y-3 bg-gradient-to-b from-orange-200 to-orange-100 rounded-3xl p-4">
-
-                                <thead>
-
-                                    <tr>
-
-                                        <th
-                                            class="bg-orange-400 text-white p-5 text-lg font-semibold rounded-l-2xl border-r border-orange-300">
-                                            Features
-                                        </th>
-
-                                        <th
-                                            class="bg-orange-400 text-white p-5 text-lg font-semibold border-r border-orange-300">
-                                            Non AC (8 Hours)
-                                        </th>
-
-                                        <th
-                                            class="bg-orange-400 text-white p-5 text-lg font-semibold border-r border-orange-300">
-                                            Non AC (12 Hours)
-                                        </th>
-
-                                        <th class="bg-orange-400 text-white p-5 text-lg font-semibold rounded-r-2xl">
-                                            AC Library
-                                        </th>
-
-                                    </tr>
-
-                                </thead>
-
-                                <tbody>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            Monthly Fee
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ₹400
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ₹500
-                                        </td>
-
-                                        <td class="p-5 text-center font-bold text-orange-500 rounded-r-xl">
-                                            Starting ₹800
-                                        </td>
-
-                                    </tr>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            Daily Access
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            8 Hours
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            12 Hours
-                                        </td>
-
-                                        <td class="p-5 text-center rounded-r-xl">
-                                            12+ Hours
-                                        </td>
-
-                                    </tr>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            Comfortable Seating
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ✓
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ✓
-                                        </td>
-
-                                        <td class="p-5 text-center text-green-600 rounded-r-xl">
-                                            ✓
-                                        </td>
-
-                                    </tr>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            High-Speed WiFi
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ✓
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ✓
-                                        </td>
-
-                                        <td class="p-5 text-center text-green-600 rounded-r-xl">
-                                            ✓
-                                        </td>
-
-                                    </tr>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            Charging Point
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ✓
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            ✓
-                                        </td>
-
-                                        <td class="p-5 text-center text-green-600 rounded-r-xl">
-                                            ✓
-                                        </td>
-
-                                    </tr>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            Air Conditioning
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200 text-red-500">
-                                            ✕
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200 text-red-500">
-                                            ✕
-                                        </td>
-
-                                        <td class="p-5 text-center text-green-600 rounded-r-xl">
-                                            ✓
-                                        </td>
-
-                                    </tr>
-
-                                    <tr class="bg-white rounded-2xl shadow-sm">
-
-                                        <td class="p-5 font-medium border-r border-gray-200 rounded-l-xl">
-                                            Recommended For
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            Casual Learners
-                                        </td>
-
-                                        <td class="p-5 text-center border-r border-gray-200">
-                                            Competitive Aspirants
-                                        </td>
-
-                                        <td class="p-5 text-center rounded-r-xl font-semibold">
-                                            Full-Time Preparation
-                                        </td>
-
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-stretch">
+                    <!-- CARD 1: Part Time Non-AC (6 Hours) -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-stone-500 font-bold uppercase tracking-wider text-xs">Part Time</span>
+                            <h3 class="text-xl font-black text-stone-900 mt-1">Non-AC (6 Hours)</h3>
+                            <p class="text-stone-500 text-sm mt-1">Perfect for regular school and college students after
+                                classes.</p>
+                            <div class="my-6 flex items-baseline gap-1">
+                                <span class="text-4xl font-black text-stone-900">₹399</span>
+                                <span class="text-stone-500 text-sm">/ month</span>
+                            </div>
+                            <hr class="border-stone-100 my-6">
+                            <ul class="space-y-4 text-stone-600 text-sm">
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">chair</span> Reserved
+                                    Seat (6 Hours)</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">lock</span> Locker
+                                    Facility Available</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">wifi</span> High Speed
+                                    Internet</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">local_drink</span> RO
+                                    Water (Hot/Cold/Normal)</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">newspaper</span> News &
+                                    Monthly Magazines</li>
+                                <li class="flex items-center gap-3 text-stone-400"><span
+                                        class="material-symbols-outlined text-stone-300 text-lg">ac_unit</span> Non
+                                    Air-Conditioned</li>
+                            </ul>
                         </div>
-
+                        <a href="/join-library.html"
+                            class="mt-8 block w-full text-center bg-stone-100 text-stone-800 py-3.5 rounded-xl font-bold hover:bg-orange-600 hover:text-white transition-all">Choose
+                            Shift</a>
                     </div>
 
+                    <!-- CARD 2: Full Time Non-AC (Full Day) -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-stone-500 font-bold uppercase tracking-wider text-xs">Full Time</span>
+                            <h3 class="text-xl font-black text-stone-900 mt-1">Non-AC (Full Day)</h3>
+                            <p class="text-stone-500 text-sm mt-1">Best for students preparing full-time for competitive
+                                government exams.</p>
+                            <div class="my-6 flex items-baseline gap-1">
+                                <span class="text-4xl font-black text-stone-900">₹499</span>
+                                <span class="text-stone-500 text-sm">/ month</span>
+                            </div>
+                            <hr class="border-stone-100 my-6">
+                            <ul class="space-y-4 text-stone-600 text-sm">
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">schedule</span> 24x7
+                                    Open Access</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">chair</span> Reserved
+                                    Seat (Full Day)</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">lock</span> Locker
+                                    Facility Available</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">wifi</span> High Speed
+                                    Internet</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-stone-600 text-lg">local_drink</span> RO
+                                    Water (Hot/Cold/Normal)</li>
+                                <li class="flex items-center gap-3 text-stone-400"><span
+                                        class="material-symbols-outlined text-stone-300 text-lg">ac_unit</span> Non
+                                    Air-Conditioned</li>
+                            </ul>
+                        </div>
+                        <a href="/join-library.html"
+                            class="mt-8 block w-full text-center bg-stone-100 text-stone-800 py-3.5 rounded-xl font-bold hover:bg-orange-600 hover:text-white transition-all">Choose
+                            Shift</a>
+                    </div>
+
+                    <!-- CARD 3: MOST POPULAR - Part Time AC (6 Hours) -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border-2 border-orange-500 shadow-md relative flex flex-col justify-between">
+                        <span
+                            class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-orange-600 text-white font-extrabold text-xs uppercase px-4 py-1.5 rounded-full tracking-widest shadow-md text-center">Most
+                            Popular</span>
+                        <div>
+                            <span class="text-orange-600 font-bold uppercase tracking-wider text-xs">Part Time
+                                Comfort</span>
+                            <h3 class="text-xl font-black text-stone-900 mt-1">AC Space (6 Hours)</h3>
+                            <p class="text-stone-500 text-sm mt-1">Cool, premium comfort for focused 6-hour daily study
+                                shifts.</p>
+                            <div class="my-6 flex items-baseline gap-1">
+                                <span class="text-4xl font-black text-stone-900">₹599</span>
+                                <span class="text-stone-500 text-sm">/ month</span>
+                            </div>
+                            <hr class="border-stone-100 my-6">
+                            <ul class="space-y-4 text-stone-600 text-sm">
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-orange-500 text-lg">ac_unit</span> Fully
+                                    Air Conditioned</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-orange-500 text-lg">lock_person</span>
+                                    Reserved Seat + Attached Locker</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-orange-500 text-lg">wifi</span> High Speed
+                                    Internet</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-orange-500 text-lg">local_drink</span> RO
+                                    Water (Hot/Cold/Normal)</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-orange-500 text-lg">newspaper</span> News
+                                    & Monthly Magazines</li>
+                                <li class="flex items-center gap-3"><span
+                                        class="material-symbols-outlined text-orange-500 text-lg">psychology</span>
+                                    Silent & Studious Space</li>
+                            </ul>
+                        </div>
+                        <a href="/join-library.html"
+                            class="mt-8 block w-full text-center bg-orange-600 text-white py-3.5 rounded-xl font-bold hover:bg-orange-700 shadow-lg shadow-orange-600/20 transition-all">Choose
+                            Shift</a>
+                    </div>
+
+                    <!-- CARD 4: Full Day (AC) -->
+                    <div
+                        class="bg-[#251901] text-white relative rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+                        <span
+                            class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-orange-600 text-white font-extrabold text-xs uppercase px-4 py-1.5 rounded-full tracking-widest shadow-md text-center">Super
+                            Popular</span>
+                        <div>
+                            <div>
+                                <span class="text-orange-400 font-bold uppercase tracking-wider text-xs">Full
+                                    Comfort</span>
+                                <h3 class="text-xl font-black text-[#FAEED4] mt-1">Full Day (AC)</h3>
+                                <p class="text-stone-400 text-sm mt-1">Cool and comfortable space for long 6+ hour focus
+                                    sessions.</p>
+                                <div class="my-6 flex items-baseline gap-1">
+                                    <span class="text-4xl font-black text-[#FAEED4]">₹799</span>
+                                    <span class="text-stone-400 text-sm">/ month</span>
+                                </div>
+                                <hr class="border-stone-800 my-6">
+                                <ul class="space-y-4 text-stone-300 text-sm">
+                                    <li class="flex items-center gap-3"><span
+                                            class="material-symbols-outlined text-orange-400 text-lg">schedule</span>
+                                        24x7
+                                        Open Access</li>
+                                    <li class="flex items-center gap-3"><span
+                                            class="material-symbols-outlined text-orange-400 text-lg">ac_unit</span>
+                                        Fully
+                                        Air Conditioned</li>
+                                    <li class="flex items-center gap-3"><span
+                                            class="material-symbols-outlined text-orange-400 text-lg">lock_person</span>
+                                        Reserved Seat + Attached Locker</li>
+                                    <li class="flex items-center gap-3"><span
+                                            class="material-symbols-outlined text-orange-400 text-lg">wifi</span> High
+                                        Speed
+                                        Internet</li>
+                                    <li class="flex items-center gap-3"><span
+                                            class="material-symbols-outlined text-orange-400 text-lg">local_drink</span>
+                                        RO
+                                        Water (Hot/Cold/Normal)</li>
+                                    <li class="flex items-center gap-3"><span
+                                            class="material-symbols-outlined text-orange-400 text-lg">newspaper</span>
+                                        News
+                                        & Monthly Magazines</li>
+                                </ul>
+                            </div>
+                            <a href="/join-library.html"
+                                class="mt-8 block w-full text-center bg-[#FAEED4] text-[#251901] py-3.5 rounded-xl font-bold hover:bg-white transition-all">Choose
+                                Shift</a>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-
         </section>
 
-        <!-- Features of Library ends here  -->
-
-        <!-- CTA  -->
-
-        <section class="py-20 bg-[#FAEED4]">
-
-            <div class="max-w-5xl mx-auto px-6 text-center">
-
-                <h2 class="text-4xl font-bold">
-                    Ready To Start Learning?
+        <section class="py-20 bg-[#FAEED4] relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-6">
+                <h2 class="text-3xl md:text-4xl font-black text-stone-900 tracking-tight">
+                    Start Studying in a Better Environment Today
                 </h2>
-
-                <p class="mt-4 text-gray-700">
-                    Join Dravidian Campus Library and take the next step toward
-                    academic success and personal growth.
+                <p class="text-stone-700 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    We limit our seat capacity to make sure everyone gets a peaceful space. Fill out our form today to
+                    confirm and reserve your seat.
                 </p>
-
-                <button
-                    class="mt-8 bg-[#251901] cursor-pointer text-white px-8 py-3 rounded-xl hover:bg-orange-400 transition">
-                    <a href="/join-library.html">Enroll Now</a>
-                </button>
-
+                <div class="pt-4">
+                    <a href="/join-library.html"
+                        class="inline-block bg-[#251901] text-[#FAEED4] px-10 py-4 rounded-2xl font-bold shadow-xl hover:bg-orange-600 hover:text-white transition duration-300">
+                        Book Your Seat Now
+                    </a>
+                </div>
             </div>
-
         </section>
     </main>
 
+
+
     <!-- Footer starts here  -->
 
-    <footer class="bg-[#251901] text-white">
-
+    <footer class="bg-[#251901] text-white font-sans mt-10">
         <div class="max-w-7xl mx-auto px-6 py-16">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                <!-- Brand -->
-                <div>
-
+                <div class="lg:col-span-1">
                     <div class="flex items-center gap-3">
-
-                        <img src="public/logo.png" alt="Dravidian Campus Logo"
+                        <img src="public/logo-for-a-reason.png" alt="Dravidian Campus Logo"
                             class="w-12 h-12 rounded-full object-cover">
-
-                        <h3 class="text-2xl font-bold">
-                            Dravidian Campus
-                        </h3>
-
+                        <h3 class="text-2xl font-bold tracking-tight">Dravidian Campus</h3>
                     </div>
-
-                    <p class="mt-5 text-gray-400 leading-relaxed">
-                        Empowering students through quality education,
-                        expert mentorship, and a focused learning
+                    <p class="mt-5 text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Empowering students through quality education, expert mentorship, and a focused learning
                         environment.
                     </p>
-
                 </div>
 
-                <!-- Quick Links -->
                 <div>
-
-                    <h4 class="text-lg font-semibold mb-5">
+                    <h4
+                        class="text-lg font-semibold mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[2px] after:bg-orange-500">
                         Quick Links
                     </h4>
-
-                    <ul class="space-y-3 text-gray-400">
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Home
-                            </a>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="/" class="hover:text-orange-400 transition-colors duration-200">Home</a></li>
+                        <li><a href="/academics.html"
+                                class="hover:text-orange-400 transition-colors duration-200">Academics</a></li>
+                        <li class="hover:text-gray-300 transition-colors hover:text-orange-400 transition-colors"><a
+                                href="computer-course.html">Computer
+                                Courses</a></li>
+                        <li><a href="/library.html"
+                                class="hover:text-orange-400 transition-colors duration-200">Library</a></li>
+                        <li><a href="/about-dravidian-campus.html"
+                                class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
+                        <li><a href="/" class="hover:text-orange-400 transition-colors duration-200">Contact</a></li>
+                        <li><a href="/admin/login.html"
+                                class="hover:text-orange-400 transition-colors duration-200">Admin Login</a>
                         </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Courses
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Library
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                About Us
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-orange-400 transition">
-                                Contact
-                            </a>
-                        </li>
-
                     </ul>
-
                 </div>
 
-                <!-- Programs -->
                 <div>
-
-                    <h4 class="text-lg font-semibold mb-5">
+                    <h4
+                        class="text-lg font-semibold mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[2px] after:bg-orange-500">
                         Our Programs
                     </h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
 
-                    <ul class="space-y-3 text-gray-400">
+                        <li class="hover:text-gray-300 transition-colors"> <a href=""> Tuition Classes</a>
+                        </li>
+                        <li class="hover:text-gray-300 transition-colors"><a href="/computer-course.html">Computer
+                                Courses</a></li>
+                        <li class="hover:text-gray-300 transition-colors"><a href="/spoken-english.html">Spoken
+                                English</a></li>
 
-                        <li>Competitive Exams</li>
+                        <li class="hover:text-gray-300 transition-colors"><a href="/competetive-exams.html">Competitive
+                                Exams</a></li>
 
-                        <li>Tuition Classes</li>
-
-                        <li>Board Exam Preparation</li>
-
-                        <li>Computer Courses</li>
-
-                        <li>English Speaking</li>
-
-                        <li>Digital Library</li>
-
+                        <li class="hover:text-gray-300 transition-colors"><a href="/library.html">Digital Library</a>
+                        </li>
                     </ul>
-
                 </div>
 
-                <!-- Contact -->
-                <div>
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h4
+                            class="text-lg font-semibold mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-8 after:h-[2px] after:bg-orange-500">
+                            Contact Information
+                        </h4>
+                        <div class="space-y-3.5 text-sm text-gray-400">
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">add_call</span>
+                                +91 7052291092
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">mail</span>
+                                info@dravidiancampus.com
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">location_on</span>
+                                Khasra no.183, DRAVIDIAN CAMPUS, Street no.04, Border Road, Chauhan Patti, Sabhapur,
+                                Delhi, Ghaziabad, Uttar Pradesh 110094
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-orange-400 text-lg">schedule</span>
+                                Mon - Sat: 8 AM - 8 PM
+                            </p>
+                        </div>
+                    </div>
 
-                    <h4 class="text-lg font-semibold mb-5">
-                        Contact Information
-                    </h4>
+                    <div class="mt-10 lg:mt-6">
 
-                    <div class="space-y-4 text-gray-400">
+                        <span class="text-xs font-semibold text-orange-400 uppercase tracking-[0.25em] block mb-5">
+                            Connect With Us
+                        </span>
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                add_call
-                            </span>
-                            +91 XXXXX XXXXX
-                        </p>
+                        <div class="flex items-center gap-4 flex-wrap">
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                mail
-                            </span> info@dravidiancampus.com
-                        </p>
+                            <!-- Instagram -->
+                            <a href="#" aria-label="Instagram"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-500/30 hover:border-pink-500">
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                location_on
-                            </span> Address
-                        </p>
+                                <div
+                                    class="absolute inset-0  opacity-0 group-hover:opacity-100 transition duration-300">
+                                </div>
 
-                        <p class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-orange-400">
-                                schedule
-                            </span> Mon - Sat: 8 AM - 8 PM
+                                <img src="public/instagram.png" alt="Instagram"
+                                    class="relative z-10 w-full h-ful  transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="#" aria-label="Facebook"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30 hover:border-blue-500">
+
+                                <div
+                                    class="absolute inset-0  opacity-0 group-hover:opacity-100 transition duration-300">
+                                </div>
+
+                                <img src="public/facebook.png" alt="Facebook"
+                                    class="relative z-10 w-full h-full transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                            <!-- YouTube -->
+                            <a href="#" aria-label="YouTube"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-red-500/30 hover:border-red-500">
+
+                                <div
+                                    class="absolute inset-0  opacity-0 group-hover:opacity-100 transition duration-300">
+                                </div>
+
+                                <img src="public/youtube.png" alt="YouTube"
+                                    class="relative z-10 w-full h-full   transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                            <!-- Telegram -->
+                            <a href="#" aria-label="Telegram"
+                                class="group relative overflow-hidden w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/30 hover:border-cyan-500">
+
+                                <div class="absolute inset-0  group-hover:opacity-100 transition duration-300">
+                                </div>
+
+                                <img src="public/telegram.png" alt="Telegram"
+                                    class="relative z-10 w-full h-full   transition-transform duration-300 group-hover:scale-110">
+                            </a>
+
+                        </div>
+
+                        <p class="text-xs text-zinc-400 mt-4 leading-relaxed max-w-sm">
+                            Stay connected with Dravidian Campus for updates, exam alerts,
+                            admission announcements and educational content.
                         </p>
 
                     </div>
+
 
                 </div>
 
             </div>
 
-            <!-- Divider -->
-            <div class="border-t border-gray-800 mt-12 pt-8">
-
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-
-                    <p class="text-gray-500 text-center md:text-left">
-                        © 2026 Dravidian Campus. All Rights Reserved.
+            <div class="border-t border-white/10 mt-16 pt-8">
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-500">
+                    <p class="text-center sm:text-left " id="copyright">
+                        &copy; 2026 Dravidian Campus. All Rights Reserved.
                     </p>
-
-                    <!-- Social Links -->
-                    <div class="flex items-center gap-5 text-2xl">
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/instagram.png" alt="dravidian campus instagram" srcset="">
-                        </a>
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/facebook.png" alt="dravidian campus facebook">
-                        </a>
-
-
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/youtube.png" alt="dravidian campus youtube">
-                        </a>
-
-                        <a href="#" class="hover:text-orange-400 transition">
-                            <img src="public/telegram.png" alt="dravidian campus telegram">
-                        </a>
-
-                    </div>
-
+                    <p class="text-center sm:text-right tracking-wide">
+                        Developed & Maintained by <a href="https://ankityadavwebdev.netlify.app/"
+                            class="text-orange-400/90 hover:text-orange-400 font-semibold transition-colors duration-200">Ankit
+                            Yadav</a>
+                    </p>
                 </div>
-
             </div>
 
         </div>
-
     </footer>
 
     <script src="/navbar.js"></script>
