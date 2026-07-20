@@ -9,10 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100">
-   
-    <!-- Navbar Starts here  -->
-   
+<body class="bg-gray-100 flex flex-col min-h-screen justify-between">
+
+    <!-- Navbar starts here  -->
+
     <div id="navbar" class="bg-[#FAEED4]/80 backdrop-blur-lg border border-white/10 shadow  fixed top-0 z-50 w-full">
 
         <nav class="w-[95%] md:w-[90%] lg:w-4/5 mx-auto">
@@ -105,214 +105,60 @@
         </div>
 
     </div>
-    <!-- Navbar Ends here  -->
-    <section class="pt-22">
+
+    <!-- Navbar ends here  -->
+
+
+    <!-- Success Message Section -->
+    <main class="flex-grow flex items-center justify-center px-4 pt-32 pb-12">
         <div
-            class="bg-orange-400/30 backdrop-blur-lg shadow-lg border border-white border-lg flex items-center justify-center flex-col min-h-[200px] rounded mx-auto max-w-[90%] p-4">
-            <h1 class="md:text-3xl lg:text-5xl text-xl font-bold">
-                Photoshop & Animation
+            class="bg-[#FAEED4]/40 backdrop-blur-xl border border-white/40 shadow-xl max-w-lg w-full rounded-3xl p-8 md:p-12 text-center transform transition duration-500 hover:scale-[1.01]">
+
+            
+            <div
+                class="mx-auto w-20 h-20 bg-orange-400/20 text-orange-500 rounded-full flex items-center justify-center mb-6 shadow-inner border border-orange-400/30">
+                <span class="material-symbols-outlined text-4xl font-bold animate-pulse">
+                    check_circle
+                </span>
+            </div>
+
+            
+            <h1 class="text-3xl font-bold text-[#251901] tracking-tight">
+                Submission Received!
             </h1>
-            <p class="mt-4 text-center max-w-3xl text-gray-800 leading-relaxed">
-                Learn how to edit photos and make moving animations from start to finish. Master photo editing, picture
-                design, cartoon motion, and make real projects.
+
+            <!-- Transparency Info Banner -->
+            <p class="mt-4 text-gray-700 text-base leading-relaxed">
+                Thank you for reaching out to Dravidian Campus. We have safely received your information.
             </p>
-        </div>
-    </section>
 
-
-    <section class="mt-12 max-w-[90%] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-10">
-
-            <div>
-                <img src="public/dravidian-campus-image-editing-animation-classes.jpeg"
-                    alt="Dravidian Campus Photoshop and Animation Course"
-                    class="rounded-3xl h-[400px] w-full object-cover shadow-lg hero-image">
-
-                <div class="space-y-10 mt-10">
-                    <section class="bg-white rounded-3xl p-8 shadow">
-                        <h2 class="text-3xl font-bold">About the Course</h2>
-                        <p class="mt-5 text-gray-700 leading-relaxed">
-                            Photo editing and animation are great skills to learn today. This course teaches you how to
-                            change pictures, design graphics, and make objects move using simple tools.
-                        </p>
-                        <p class="mt-4 text-gray-700 leading-relaxed">
-                            You will start from the basics and move to making your own animations. You will get real
-                            practice by working on fun projects and daily exercises.
-                        </p>
-                    </section>
-
-                    <section class="bg-white rounded-3xl p-8 shadow">
-                        <h2 class="text-3xl font-bold">What You Will Learn</h2>
-                        <ul class="mt-6 space-y-4">
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Photoshop Tools and How to Use Them
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Photo Editing and Changing Backgrounds
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Making Logos and Banner Designs
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Color Corrections and Retouching
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Wedding Album Editing
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Basics of Animation and Moving Objects
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Motion Graphics
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="material-symbols-outlined text-green-600">check_circle</span>
-                                Video Editing (Intro/Outro/Reels)
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section class="bg-white rounded-3xl p-8 shadow">
-                        <h2 class="text-3xl font-bold">Before You Start</h2>
-                        <ul class="mt-5 ml-6 space-y-2">
-                            <li class="list-disc">Basic computer knowledge</li>
-                            <li class="list-disc">No past design or drawing skills needed</li>
-                            <li class="list-disc">Ready to practice every day</li>
-                        </ul>
-                    </section>
-
-                    <section class="bg-white rounded-3xl p-8 shadow">
-                        <h2 class="text-3xl font-bold">Who Can Join?</h2>
-                        <ul class="mt-5 ml-6 space-y-2">
-                            <li class="list-disc">School Students</li>
-                            <li class="list-disc">College Students</li>
-                            <li class="list-disc">Content Creators</li>
-                            <li class="list-disc">Anyone who wants to learn design</li>
-                        </ul>
-                        <p class="mt-6 font-semibold text-lg text-gray-900">
-                            By the end of this course, you will be able to edit photos and create your own animations
-                            easily.
-                        </p>
-                    </section>
+            <div
+                class="bg-white/60 border border-orange-200/50 rounded-2xl p-4 my-6 text-sm text-left text-gray-600 space-y-2">
+                <div class="flex items-center gap-2 font-medium text-[#251901]">
+                    <span class="material-symbols-outlined text-sm text-orange-500">info</span>
+                    What happens next?
                 </div>
+                <p>Our academic admissions desk will review your submission details. A counselor will get in touch with
+                    you via your provided contact number or email shortly.</p>
             </div>
 
-            <div>
-                <div class="sticky top-28">
-                    <div class="bg-[#FAEED4] border border-orange-200 rounded-3xl p-8 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6">Course Details</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-white rounded-2xl md:p-5 p-5 text-center">
-                                <h4 class="md:text-3xl text-lg font-bold text-orange-500">15+</h4>
-                                <p>Projects</p>
-                            </div>
-                            <div class="bg-white rounded-2xl md:p-5 p-3 text-center">
-                                <h4 class="md:text-3xl font-bold text-orange-500 text-lg">8</h4>
-                                <p>Weeks</p>
-                            </div>
-                            <div class="bg-white rounded-2xl p-3 md:p-5 text-center">
-                                <h4 class="md:text-3xl text-lg font-bold text-orange-500">100%</h4>
-                                <p>Practical</p>
-                            </div>
-                            <div class="bg-white rounded-2xl p-3 md:p-5 text-center">
-                                <h4 class="md:text-3xl font-bold text-orange-500 text-lg">1</h4>
-                                <p class="md:text-lg text-md">Certificate</p>
-                            </div>
-                        </div>
-
-                        <hr class="my-8 border-orange-200">
-
-                        <div class="space-y-4">
-                            <div class="flex justify-between">
-                                <span class="font-medium">Level</span>
-                                <span>Beginner</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="font-medium">Language</span>
-                                <span>English / Hindi</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="font-medium">Class Mode</span>
-                                <span>Offline</span>
-                            </div>
-                        </div>
-
-                        <button
-                            class="w-full mt-8 bg-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
-                            <a href="/join-computer-course.html">Enroll Now</a>
-                        </button>
-                    </div>
-                </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="/index.html"
+                    class="w-full sm:w-auto px-6 py-3 bg-[#251901] text-white rounded-xl font-medium shadow hover:bg-orange-500 transition duration-300 text-center">
+                    Back to Home
+                </a>
+                <a href="/computer-course.html"
+                    class="w-full sm:w-auto px-6 py-3 bg-white/80 text-gray-800 border border-gray-300 rounded-xl font-medium hover:bg-orange-400/20 transition duration-300 text-center">
+                    Explore Courses
+                </a>
             </div>
 
         </div>
-    </section>
+    </main>
 
-
-    <section class="py-12 w-[90%] mx-auto">
-        <div class="flex items-center justify-between">
-            <h1 class="text-3xl font-bold">Our Other Courses</h1>
-            <button
-                class="bg-[#251901] rounded-xl w-[170px] h-[50px] flex items-center justify-center text-white p-6 hover:bg-orange-500 transition duration-300">
-                <a href="/computer-course.html">More Courses</a>
-            </button>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
-            <div class="flex justify-center flex-col gap-6 bg-white shadow p-3">
-                <img src="public/dravidian-campus-ms-office-classes.jpeg" alt="MS Office Course" class="rounded">
-                <h3 class="font-bold text-2xl">Ms Office</h3>
-                <p
-                    class="inline-block rounded-full px-4 py-2 bg-orange-200/20 text-orange-500 text-xs sm:text-sm border border-white/20 backdrop-blur-xl w-[30%] shadow-lg text-center">
-                    Beginner
-                </p>
-                <button
-                    class="w-[50%] h-[40px] flex items-center justify-center bg-[#251901] border border-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
-                    <a href="/join-computer-course.html">Join Now</a>
-                </button>
-            </div>
-
-            <div class="flex justify-center flex-col gap-6 bg-white shadow p-3">
-                <img src="public/dravidian-campus-python-classes.jpg" alt="Python Course" class="rounded">
-                <h3 class="font-bold text-2xl">Python</h3>
-                <p
-                    class="inline-block rounded-full px-4 py-2 bg-orange-200/20 text-orange-500 text-xs sm:text-sm border border-white/20 backdrop-blur-xl w-[30%] shadow-lg text-center">
-                    Beginner
-                </p>
-                <button
-                    class="w-[50%] h-[40px] flex items-center justify-center bg-[#251901] border border-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
-                    <a href="/join-computer-course.html">Join Now</a>
-                </button>
-            </div>
-
-            <div class="flex justify-center flex-col gap-6 bg-white shadow p-3">
-                <img src="public/dravidian-campus-web-dev-course.jpeg" alt="Web Development Course" class="rounded">
-                <h3 class="font-bold text-2xl">Web Development</h3>
-                <p
-                    class="inline-block rounded-full px-4 py-2 bg-orange-200/20 text-orange-500 text-xs sm:text-sm border border-white/20 backdrop-blur-xl w-[30%] shadow-lg text-center">
-                    Medium
-                </p>
-                <button
-                    class="w-[50%] h-[40px] flex items-center justify-center bg-[#251901] border border-[#251901] text-white py-4 rounded-xl font-semibold hover:bg-orange-500 transition duration-300 cursor-pointer">
-                    <a href="/join-computer-course.html">Join Now</a>
-                </button>
-            </div>
-        </div>
-    </section>
-
-<!-- Footer starts here  -->
-    <footer class="bg-[#251901] text-white font-sans mt-10">
+    <!-- Footer Starts here  -->
+    <footer class="bg-[#251901] text-white font-sans">
         <div class="max-w-7xl mx-auto px-6 py-16">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -391,8 +237,7 @@
                             </p>
                             <p class="flex items-center gap-3">
                                 <span class="material-symbols-outlined text-orange-400 text-lg">location_on</span>
-                                Khasra no.183, DRAVIDIAN CAMPUS, Street no.04, Border Road, Chauhan Patti, Sabhapur,
-                                Delhi, Ghaziabad, Uttar Pradesh 110094
+                                Address Line, City
                             </p>
                             <p class="flex items-center gap-3">
                                 <span class="material-symbols-outlined text-orange-400 text-lg">schedule</span>
@@ -486,9 +331,10 @@
 
         </div>
     </footer>
+    <!-- Footer Ends here  -->
 
-
-    <script src="/navbar.js"></script>
+    <!-- Minimal JavaScript for Mobile Menu Drawer -->
+    <script src="navbar.js"></script>
 </body>
 
 </html>

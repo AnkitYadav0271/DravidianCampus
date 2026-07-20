@@ -1,6 +1,6 @@
 console.log("Script loadded");
 
-const form = document.getElementById("newAdmissionLibrary");
+const form = document.getElementById("newAdmissionComputerCourse");
 
 const nameError = document.getElementById("nameError");
 const phoneError = document.getElementById("phoneError");
@@ -8,12 +8,13 @@ const phoneError = document.getElementById("phoneError");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function checkValidity() {
- let fullName = form.fullName.value.trim();
- let phoneNo = form.phoneNo.value.trim();
- let  course = form.course.value;
+  fullName = form.fullName.value.trim();
+  phoneNo = form.phoneNo.value.trim();
+  course = form.course.value;
 
   // Reset errors
   nameError.textContent = "";
+
   phoneError.textContent = "";
   let isValid = true;
   // Name Validation
@@ -28,7 +29,6 @@ function checkValidity() {
     isValid = false;
   }
 
-  // Email Validation
 
   // Course Validation
   if (!course) {
@@ -51,13 +51,12 @@ form.addEventListener("submit", async (e) => {
   const data = {
     fullName: fullName,
     phoneNo: phoneNo,
-    email: null,
+    email: "",
     course: course,
     message: form.message.value,
   };
   e.preventDefault();
 
-  console.log("Checking if validity true or not", checkValidity());
   if (!checkValidity()) return;
 
   const response = await fetch("http://localhost:8000/new-admission", {
@@ -70,15 +69,12 @@ form.addEventListener("submit", async (e) => {
   });
 
   const result = await response.json();
-  
 
   if (response.ok && result.success) {
     resultDiv.classList.remove("hidden");
     resultDiv.classList.remove("bg-red-700");
     resultDiv.classList.add("bg-green-700");
     resultMessage.textContent = result.message;
-
-    window.location.href = '/response.html';
   } else {
     resultDiv.classList.remove("hidden");
     resultDiv.classList.remove("bg-green-700");

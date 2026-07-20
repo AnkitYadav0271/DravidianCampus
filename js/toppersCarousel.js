@@ -17,6 +17,7 @@ const dots = dotsContainerToppers.querySelectorAll("div");
 function updateCarouselToppers() {
   cards.forEach((card, index) => {
     const offset = index - currentIndex;
+    console.log("Logging ://", offset);
 
     if (offset === 0) {
       // Central Active Focus
@@ -28,7 +29,7 @@ function updateCarouselToppers() {
     } else if (offset === -1) {
       // Left Side Wing
       card.style.transform = `translateX(-250px) scale(0.85) rotateY(35deg) translateZ(0px)`;
-      card.style.zIndex = 20;
+      card.style.zIndex = 18;
       card.style.opacity = "0.75";
       card.style.filter = "brightness(0.6)";
       card.style.boxShadow = "none";
