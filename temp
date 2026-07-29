@@ -1,92 +1,44 @@
-console.log("Script loadded");
+<section class="py-24 bg-gradient-to-br from-slate-50 via-orange-50/30 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-[380px]">
+                        <div
+                            class="absolute inset-0 bg-orange-400 rounded-[32px] transform -rotate-3 scale-[1.01] opacity-10 blur-sm">
+                        </div>
+                        <div class="bg-white p-3 rounded-[32px] border border-slate-200/60 shadow-md">
+                            <img src="public/om-tiwari-sir.jpg" alt="Lead Speaking Mentor"
+                                class="rounded-[24px] w-full h-[460px] object-cover transition-transform duration-500 group-hover:scale-105 hover:cursor-pointer ">
+                        </div>
+                    </div>
+                </div>
 
-const form = document.getElementById("newAdmissionLibrary");
+                <div class="lg:col-span-7 space-y-6">
+                    <span
+                        class="text-orange-500 font-bold uppercase tracking-widest text-xs bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
+                        Lead Mentor
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+                        Learn From Professionals Who Understand Your Journey
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Our methodology completely bypasses rigid textbook memorization. We prioritize active workspace
+                        practice, conversational comfort, and professional articulation.
+                    </p>
 
-const nameError = document.getElementById("nameError");
-const phoneError = document.getElementById("phoneError");
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function checkValidity() {
- let fullName = form.fullName.value.trim();
- let phoneNo = form.phoneNo.value.trim();
- let  course = form.course.value;
-
-  // Reset errors
-  nameError.textContent = "";
-  phoneError.textContent = "";
-  let isValid = true;
-  // Name Validation
-  if (fullName.length < 3) {
-    nameError.textContent = "Please enter a valid name";
-    isValid = false;
-  }
-
-  // Phone Validation
-  if (!/^\d{10}$/.test(phoneNo)) {
-    phoneError.textContent = "Please enter a valid 10 digit phone number";
-    isValid = false;
-  }
-
-  // Email Validation
-
-  // Course Validation
-  if (!course) {
-    isValid = false;
-    alert("Please select a course");
-  }
-
-  return isValid;
-}
-
-//* Submitting the form
-
-const resultMessage = document.getElementById("resultMessage");
-const resultDiv = document.getElementById("resultDiv");
-
-form.addEventListener("submit", async (e) => {
-  const fullName = form.fullName.value.trim();
-  const phoneNo = form.phoneNo.value.trim();
-  const course = form.course.value;
-  const data = {
-    fullName: fullName,
-    phoneNo: phoneNo,
-    email: null,
-    course: course,
-    message: form.message.value,
-  };
-  e.preventDefault();
-
-  console.log("Checking if validity true or not", checkValidity());
-  if (!checkValidity()) return;
-
-  const response = await fetch("http://localhost:8000/new-admission", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
-
-    body: JSON.stringify(data),
-  });
-
-  const result = await response.json();
-  
-
-  if (response.ok && result.success) {
-    resultDiv.classList.remove("hidden");
-    resultDiv.classList.remove("bg-red-700");
-    resultDiv.classList.add("bg-green-700");
-    resultMessage.textContent = result.message;
-
-    window.location.href = '/response.html';
-  } else {
-    resultDiv.classList.remove("hidden");
-    resultDiv.classList.remove("bg-green-700");
-    resultDiv.classList.add("bg-red-700");
-    resultMessage.textContent = result.message;
-  }
-
-  setTimeout(() => {
-    resultDiv.classList.add("hidden");
-  }, 5000);
-});
+                    <div class="grid grid-cols-2 gap-4 max-w-sm pt-2">
+                        <div class="bg-white border border-slate-200/60 rounded-xl p-4 shadow-sm">
+                            <h4 class="text-2xl font-black text-orange-500">10+ Years</h4>
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider mt-0.5">Active
+                                Coaching</p>
+                        </div>
+                        <div class="bg-white border border-slate-200/60 rounded-xl p-4 shadow-sm">
+                            <h4 class="text-2xl font-black text-orange-500">1000+</h4>
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider mt-0.5">Students
+                                Guided</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

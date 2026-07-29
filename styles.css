@@ -154,3 +154,24 @@ h6 {
 .carousel-track {
   transform-style: preserve-3d;
 }
+
+
+/*Review animation*/
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-\[scroll_35s_linear_infinite\] {
+  animation: scroll 35s linear infinite;
+}
+
+.animate-\[scroll_35s_linear_infinite\]:hover {
+  animation-play-state: paused;
+}
+
