@@ -35,9 +35,9 @@ export const adminLoginController = async (req, res) => {
         const refreshToken = await jwt.sign({ id: admin._id }, process.env.JWT_SECRET, {
             expiresIn: "90d",
         });
-        
-       const session = await Session.create({ admin: admin });
-       
+        console.log("Logging refresh token:)", refreshToken);
+        console.log("Logging access token :)", accessToken);
+        await Session.create({ admin: admin });
         const isProduction = process.env.NODE_ENV === "production";
         res.cookie("accessToken", accessToken, {
             httpOnly: true,
@@ -133,9 +133,11 @@ export const forgotPasswordController = async (req, res) => {
 //________________________________________________________________________//
 export const verifyOtpController = async (req, res) => {
     const otp = req.body.otp;
-    
+    console.log("log otp here:", otp);
     let resetToken = req.cookies.resetToken;
-
+    console.log("Logging cookies :", req.headers.cookie);
+    console.log("logging req Header", req.headers);
+    console.log("Logging reset token", resetToken);
     if (!resetToken) {
         return res
             .status(400)
@@ -186,7 +188,7 @@ export const verifyOtpController = async (req, res) => {
 //________________________________________________________________________//
 export const changePasswordController = async (req, res) => {
     let resetToken = req.cookies.resetToken;
-    
+    console.log("Logging req.cookies :", req.cookies);
     const { password, confirmPassword } = req.body;
     if (!password.trim() || !confirmPassword.trim()) {
         return res.status(400).json({
