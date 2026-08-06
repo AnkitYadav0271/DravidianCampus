@@ -14,13 +14,13 @@ export const uploadOfferController = async (req, res) => {
         const uploadResult = await new Promise((resolve, reject) => {
             const stream = cloudinary.uploader.upload_stream({ folder: "dravidian-campus/offers" }, (error, result) => {
                 if (error) {
-                    console.log("Logging the error", error);
+                    
                     reject(error);
                 }
-                console.log("Logging the result :", result);
+
                 resolve(result);
             });
-            console.log("Logging the stream", stream);
+
             streamifier.createReadStream(req.file?.buffer).pipe(stream);
         });
         const offer = await offerModel.create({

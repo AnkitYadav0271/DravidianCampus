@@ -141,7 +141,7 @@ export const generateEnquiryEmail = async (args) => {
 </div>
 `,
         });
-        console.log(res);
+        
     }
     catch (e) {
         throw new Error("Having trouble in sending query");

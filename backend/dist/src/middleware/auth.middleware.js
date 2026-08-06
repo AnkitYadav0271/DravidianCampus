@@ -3,9 +3,7 @@ import { adminModel } from "../models/admin.model.js";
 export const isAuthenticated = async (req, res, next) => {
     try {
         const token = req.cookies?.accessToken;
-        console.log(token);
-        console.log("Logging req.cookies:", req.cookies);
-        console.log("Logging req.headers :", req.headers);
+        
         if (!token) {
             return res.status(401).json({
                 success: false,
