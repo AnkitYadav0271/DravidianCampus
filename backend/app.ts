@@ -3,15 +3,15 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 dotenv.config();
 import { rateLimit } from "express-rate-limit";
-import offerRouter from "./src/routes/offer.route.ts";
-import galleryRouter from "./src/routes/gallery.route.ts";
+import offerRouter from "./src/routes/offer.route.js";
+import galleryRouter from "./src/routes/gallery.route.js";
 
 import express from "express";
 import cors from "cors";
-import emailRouter from "./src/routes/email.routes.ts";
-import { connectDb } from "./src/db/db.ts";
-import authRouter from "./src/routes/admin.auth.route.ts";
-import { seedAdmin } from "./src/helper/seed.admin.ts";
+import emailRouter from "./src/routes/email.routes.js";
+import { connectDb } from "./src/db/db.js";
+import authRouter from "./src/routes/admin.auth.route.js";
+import { seedAdmin } from "./src/helper/seed.admin.js";
 
 const limit = rateLimit({
   windowMs: 15 * 60 * 1000,

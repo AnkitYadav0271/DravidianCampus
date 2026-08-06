@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import type { Request, Response } from "express";
-import { adminModel } from "../models/admin.model.ts";
+import { adminModel } from "../models/admin.model.js";
 import type { NextFunction } from "express";
 import { ObjectId } from "mongoose";
 

@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { adminLoginController, changePasswordController, forgotPasswordController, getCurrentUserController, logoutController, verifyOtpController, } from "../controllers/admin.auth.controller.js";
+import { isAuthenticated } from "../middleware/auth.middleware.js";
+//! mergeParams:true add this here
+const router = Router({ mergeParams: true });
+router.post("/login", adminLoginController);
+router.post("/logout", isAuthenticated, logoutController);
+router.post("/forgot-password", forgotPasswordController);
+router.post("/verify-otp", verifyOtpController);
+router.post("/change-password", changePasswordController);
+router.get("/current-status", isAuthenticated, getCurrentUserController);
+export default router;

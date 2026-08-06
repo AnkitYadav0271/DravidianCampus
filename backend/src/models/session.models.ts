@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { adminModel } from "./admin.model.ts";
+import { adminModel } from "./admin.model.js";
 
 const sessionSchema = new Schema({
   admin: {

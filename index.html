@@ -2186,7 +2186,7 @@
                                         </h4>
                                         <p
                                             class="text-gray-600 mt-1 font-medium hover:text-orange-500 transition duration-200">
-                                            +91 7052291092
+                                            +91 7052291092,+91 70113 79449
                                         </p>
                                     </div>
                                 </div>
@@ -2258,34 +2258,38 @@
                             Send A Message
                         </h3>
 
-                        <form class="space-y-5">
+                        <form class="space-y-5" method="post" id="form" action="/" >
 
                             <div class="relative">
                                 <span
                                     class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-orange-400 text-xl">person</span>
-                                <input type="text" placeholder="Your Name"
+                                <input type="text" placeholder="Your Name" name="fullName"
                                     class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 placeholder:text-gray-400 text-gray-800">
                             </div>
 
                             <div class="relative">
                                 <span
                                     class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-orange-400 text-xl">mail</span>
-                                <input type="email" placeholder="Your Email"
+                                <input type="email" placeholder="Your Email" name="email"
                                     class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 placeholder:text-gray-400 text-gray-800">
                             </div>
 
                             <div class="relative">
                                 <span
                                     class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-orange-400 text-xl">call</span>
-                                <input type="text" placeholder="Phone Number"
+                                <input type="text" placeholder="Phone Number" name="phoneNo"
                                     class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 placeholder:text-gray-400 text-gray-800">
                             </div>
 
                             <div class="relative">
                                 <span
                                     class="material-symbols-outlined absolute left-4 top-4 text-orange-400 text-xl">chat_bubble</span>
-                                <textarea rows="5" placeholder="Your Message"
+                                <textarea rows="5" placeholder="Your Message" name="message"
                                     class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 transition duration-200 resize-none placeholder:text-gray-400 text-gray-800"></textarea>
+                            </div>
+
+                            <div class="resultDiv flex text-center justify-center items-center hidden" id="errorDiv">
+                                <p class=" text-sm text-red-600 error"></p>
                             </div>
 
                             <div class="pt-2">
@@ -2490,6 +2494,7 @@
     <script src="js/offers.js"></script>
     <script src="js/toppersCarousel.js"></script>
     <script src="js/galleryHomePage.js"></script>
+    <script src="contactForm.js"></script>
 
 
 </body>

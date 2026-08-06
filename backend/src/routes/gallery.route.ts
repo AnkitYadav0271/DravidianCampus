@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { isAuthenticated } from "../middleware/auth.middleware.ts";
+import { isAuthenticated } from "../middleware/auth.middleware.js";
 import {
   deleteGalleryController,
   getGalleryImageController,
   uploadGalleryImageController,
-} from "../controllers/gallery.controller.ts";
-import { galleryUploadMiddleware } from "../middleware/gallery.upload.middleware.ts";
+} from "../controllers/gallery.controller.js";
+import { galleryUploadMiddleware } from "../middleware/gallery.upload.middleware.js";
 
 const router = Router({ mergeParams: true });
 

@@ -8,6 +8,12 @@ const phoneError = document.getElementById("phoneError");
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function clearInput() {
+  form.fullName.value = "";
+  form.phoneNo.value = "";
+  form.email.value = "";
+}
+
 function checkValidity() {
   fullName = form.fullName.value.trim();
   phoneNo = form.phoneNo.value.trim();
@@ -81,13 +87,16 @@ form.addEventListener("submit", async (e) => {
   });
 
   const result = await response.json();
-  
 
   if (response.ok && result.success) {
     resultDiv.classList.remove("hidden");
     resultDiv.classList.remove("bg-red-700");
     resultDiv.classList.add("bg-green-700");
     resultMessage.textContent = result.message;
+    clearInput();
+    setTimeout(() => {
+      window.location.href = "/response.html";
+    }, 1000);
   } else {
     resultDiv.classList.remove("hidden");
     resultDiv.classList.remove("bg-green-700");

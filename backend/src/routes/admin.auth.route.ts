@@ -6,8 +6,8 @@ import {
   getCurrentUserController,
   logoutController,
   verifyOtpController,
-} from "../controllers/admin.auth.controller.ts";
-import { isAuthenticated } from "../middleware/auth.middleware.ts";
+} from "../controllers/admin.auth.controller.js";
+import { isAuthenticated } from "../middleware/auth.middleware.js";
 
 //! mergeParams:true add this here
 const router = Router({ mergeParams: true });

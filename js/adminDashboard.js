@@ -9,6 +9,8 @@ async function checkAdminLogin() {
 
   const data = await response.json();
 
+  console.log("logging data at dashboard page :)",data);
+
   if (!data.success) {
     window.location.href = "/admin/login.html";
   }

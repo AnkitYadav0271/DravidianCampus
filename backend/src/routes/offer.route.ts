@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { offerUploadMiddleware } from "../middleware/offer.upload.middleware.ts";
-import { isAuthenticated } from "../middleware/auth.middleware.ts";
+import { offerUploadMiddleware } from "../middleware/offer.upload.middleware.js";
+import { isAuthenticated } from "../middleware/auth.middleware.js";
 import {
   deleteOfferController,
   getOfferImageController,
   uploadOfferController,
-} from "../controllers/offer.controller.ts";
+} from "../controllers/offer.controller.js";
 
 const router = Router({ mergeParams: true });
 

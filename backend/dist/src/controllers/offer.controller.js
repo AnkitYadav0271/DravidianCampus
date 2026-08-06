@@ -1,0 +1,73 @@
+import cloudinary from "../config/cloudinary.config.js";
+import streamifier from "streamifier";
+import { offerModel } from "../models/offer.model.js";
+//________________________________________________________________________________//
+//* -------------------- uploadOfferController ------------------------------------//
+//________________________________________________________________________________//
+export const uploadOfferController = async (req, res) => {
+    try {
+        if (!req.file) {
+            return res
+                .status(400)
+                .json({ success: false, message: "Please select an image" });
+        }
+        const uploadResult = await new Promise((resolve, reject) => {
+            const stream = cloudinary.uploader.upload_stream({ folder: "dravidian-campus/offers" }, (error, result) => {
+                if (error) {
+                    console.log("Logging the error", error);
+                    reject(error);
+                }
+                console.log("Logging the result :", result);
+                resolve(result);
+            });
+            console.log("Logging the stream", stream);
+            streamifier.createReadStream(req.file?.buffer).pipe(stream);
+        });
+        const offer = await offerModel.create({
+            imageUrl: uploadResult.secure_url,
+            publicId: uploadResult.public_id,
+        });
+        return res.status(201).json({
+            success: true,
+            message: "Offer Image uploaded successfully",
+            offerImage: offer,
+        });
+    }
+    catch (error) {
+        return res
+            .status(500)
+            .json({ success: false, message: "Image upload failed", error });
+    }
+};
+//________________________________________________________________________________//
+//* -------------------- get Offer Image Controller ------------------------------------//
+//________________________________________________________________________________//
+export const getOfferImageController = async (req, res) => {
+    try {
+        const offers = await offerModel.find().sort({ createdAt: -1 }).limit(5);
+        return res
+            .status(200)
+            .json({ success: true, message: "got the Images", offers });
+    }
+    catch (err) {
+        return res
+            .status(500)
+            .json({ success: false, message: "Internal server Error", err });
+    }
+};
+export const deleteOfferController = async (req, res) => {
+    const { id } = req.params;
+    const offer = await offerModel.findById(id);
+    if (!offer) {
+        return res.status(404).json({
+            success: false,
+            message: "Offer not found",
+        });
+    }
+    await cloudinary.uploader.destroy(offer.publicId);
+    await offerModel.findByIdAndDelete(id);
+    return res.status(200).json({
+        success: true,
+        message: "Offer deleted",
+    });
+};

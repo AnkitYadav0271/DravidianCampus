@@ -75,6 +75,9 @@ form.addEventListener("submit", async (e) => {
     resultDiv.classList.remove("bg-red-700");
     resultDiv.classList.add("bg-green-700");
     resultMessage.textContent = result.message;
+    setTimeout(() => {
+      window.location.href = "/response.html";
+    }, 2000);
   } else {
     resultDiv.classList.remove("hidden");
     resultDiv.classList.remove("bg-green-700");
