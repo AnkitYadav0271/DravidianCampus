@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { generateEnquiryEmail } from "../services/email.service.ts";
+import { generateEnquiryEmail } from "../services/email.service.js";
 
 //________________________________________________________________________//
 

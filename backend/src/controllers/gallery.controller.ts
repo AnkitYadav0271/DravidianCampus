@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import cloudinary from "../config/cloudinary.config.ts";
+import cloudinary from "../config/cloudinary.config.js";
 import streamifier from "streamifier";
-import { galleryImageModel } from "../models/gallery.model.ts";
+import { galleryImageModel } from "../models/gallery.model.js";
 //________________________________________________________________________________//
 
 //* -------------------- uploadGalleryImageController ------------------------------------//

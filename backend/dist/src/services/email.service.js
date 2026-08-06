@@ -1,26 +1,20 @@
 import dotenv from "dotenv";
-
 dotenv.config();
-
 import nodemailer from "nodemailer";
-
-import type { EmailArgs } from "../../types/types.js";
-
 const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.EMAIL_PASS,
-  },
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS,
+    },
 });
-
-export const generateEnquiryEmail = async (args: EmailArgs) => {
-  try {
-    const res = transporter.sendMail({
-      sender: process.env.EMAIL,
-      to: "dravidiancampus1@gmail.com",
-      subject: `Query regarding Admission of ${args.fullName}`,
-      html: `
+export const generateEnquiryEmail = async (args) => {
+    try {
+        const res = transporter.sendMail({
+            sender: process.env.EMAIL,
+            to: "dravidiancampus1@gmail.com",
+            subject: `Query regarding Admission of ${args.fullName}`,
+            html: `
 <div style="
     max-width:600px;
     margin:auto;
@@ -146,14 +140,13 @@ export const generateEnquiryEmail = async (args: EmailArgs) => {
 
 </div>
 `,
-    });
-
-    console.log(res);
-  } catch (e) {
-    throw new Error("Having trouble in sending query");
-  }
+        });
+        console.log(res);
+    }
+    catch (e) {
+        throw new Error("Having trouble in sending query");
+    }
 };
-
 // generateEnquiryEmail({
 //   fullName: "Ankit Yadav",
 //   email: "ankit@gmail.com",

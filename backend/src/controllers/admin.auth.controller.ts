@@ -1,10 +1,10 @@
 import type { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { adminModel } from "../models/admin.model.ts";
+import { adminModel } from "../models/admin.model.js";
 
-import { Session } from "../models/session.models.ts";
-import { sendOtpEmail } from "../verification/email.verification.ts";
+import { Session } from "../models/session.models.js";
+import { sendOtpEmail } from "../verification/email.verification.js";
 
 interface AuthRequest extends Request {
   admin: {
