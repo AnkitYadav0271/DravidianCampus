@@ -1,5 +1,5 @@
 // Configuration & API endpoint
-const API_URL = "http://localhost:8000/admin/gallery/images";
+const API_URL = "https://dravidiancampus.onrender.com/admin/gallery/images";
 
 // Function to fetch and render dynamic image cards
 async function fetchAndRenderGallery() {

@@ -26,7 +26,10 @@ function updateSlider() {
 
 async function loadOffers() {
   try {
-    const response = await fetch("http://localhost:8000/admin/offers/images");
+    const response = await fetch(
+      "https://dravidiancampus.onrender.com/admin/offers/images",
+    );
+    console.log(response);
     const data = await response.json();
     console.log(data);
 

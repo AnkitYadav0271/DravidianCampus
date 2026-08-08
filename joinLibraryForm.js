@@ -63,7 +63,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("http://localhost:8000/new-admission", {
+    const response = await fetch("https://dravidiancampus.onrender.com/new-admission", {
       method: "POST", // Capitalized is standard
       headers: {
         "Content-Type": "application/json",

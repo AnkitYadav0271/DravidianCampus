@@ -59,7 +59,7 @@ form.addEventListener("submit", async (e) => {
 
   if (!checkValidity()) return;
 
-  const response = await fetch("http://localhost:8000/new-admission", {
+  const response = await fetch("https://dravidiancampus.onrender.com/new-admission", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
