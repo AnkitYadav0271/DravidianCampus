@@ -3,7 +3,7 @@
 // =============================
 
 async function checkAdminLogin() {
-  const response = await fetch("http://localhost:8000/admin/current-status", {
+  const response = await fetch("https://dravidiancampus.onrender.com/admin/current-status", {
     credentials: "include",
   });
 

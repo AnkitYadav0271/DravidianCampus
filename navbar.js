@@ -1,6 +1,6 @@
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
-// const copyRight = document.getElementById("copyright");
+const copyRight = document.getElementById("copyright");
 
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
@@ -112,3 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+const year = new Date().getFullYear();
+
+copyRight.textContent = "\u00A9"  + year + " DRAVIDIAN CAMPUS. All Rights Reserved.";

@@ -45,7 +45,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("http://localhost:8000/contact", {
+    const response = await fetch("https://dravidiancampus.onrender.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
