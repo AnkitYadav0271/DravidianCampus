@@ -3,19 +3,18 @@
 // =============================
 
 async function checkAdminLogin() {
-  const response = await fetch("https://dravidiancampus.onrender.com/admin/current-status", {
-    credentials: "include",
-  });
+  const response = await fetch(
+    "https://dravidiancampus.onrender.com/admin/current-status",
+    {
+      credentials: "include",
+    },
+  );
 
   const data = await response.json();
-
-  console.log("logging data at dashboard page :)",data);
 
   if (!data.success) {
     window.location.href = "/admin/login.html";
   }
-
-  console.log("admin:", data);
 }
 
 checkAdminLogin();
@@ -36,6 +35,7 @@ const imageGrid = document.getElementById("imageGrid");
 const resultDiv = document.getElementById("resultDiv");
 const resultMsg = document.getElementById("resultMessage");
 const imageCount = document.getElementById("imageCount");
+const selectedImageCount = document.getElementById("selectedImageCount");
 
 let currentSection = "offers";
 let selectedFile = null;
@@ -109,7 +109,7 @@ galleryBtn.addEventListener("click", () => {
 // =============================
 // File Selection
 // =============================
-
+let selectedImage = 0;
 fileInput.addEventListener("change", (e) => {
   selectedFile = e.target.files[0];
 
@@ -117,6 +117,8 @@ fileInput.addEventListener("change", (e) => {
     resultDirector(ShowError, "please a select an image");
     return;
   }
+  selectedImage++;
+  selectedImageCount.textContent = selectedImage + " Images";
 });
 
 // =============================
@@ -195,8 +197,8 @@ uploadBtn.addEventListener("click", async () => {
   }
 
   const endpoint = isOffers
-    ? "http://localhost:8000/admin/offers/upload"
-    : "http://localhost:8000/admin/gallery/upload";
+    ? "https://dravidiancampus.onrender.com/admin/offers/upload"
+    : "https://dravidiancampus.onrender.com/admin/gallery/upload";
 
   // Wrap XHR in a Promise so it fits cleanly into your async/await pattern
   try {
@@ -262,6 +264,8 @@ uploadBtn.addEventListener("click", async () => {
       error.data && error.data.message ? error.data.message : "Upload failed";
     resultDirector(ShowError, errMsg);
   }
+
+  selectedImageCount.textContent = "0 Images";
 });
 
 // =============================
@@ -270,9 +274,12 @@ uploadBtn.addEventListener("click", async () => {
 
 async function loadOffers() {
   try {
-    const response = await fetch("http://localhost:8000/admin/offers/images", {
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://dravidiancampus.onrender.com/admin/offers/images",
+      {
+        credentials: "include",
+      },
+    );
 
     const data = await response.json();
 
@@ -288,9 +295,12 @@ async function loadOffers() {
 
 async function loadGallery() {
   try {
-    const response = await fetch("http://localhost:8000/admin/gallery/images", {
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://dravidiancampus.onrender.com/admin/gallery/images",
+      {
+        credentials: "include",
+      },
+    );
 
     const data = await response.json();
 
@@ -396,8 +406,8 @@ confirmBtn.addEventListener("click", async () => {
   try {
     const endpoint =
       currentSection === "offers"
-        ? `http://localhost:8000/admin/offers/image/${selectedDeleteId}`
-        : `http://localhost:8000/admin/gallery/image/${selectedDeleteId}`;
+        ? `https://dravidiancampus.onrender.com/admin/offers/image/${selectedDeleteId}`
+        : `https://dravidiancampus.onrender.com/admin/gallery/image/${selectedDeleteId}`;
 
     const response = await fetch(endpoint, {
       method: "DELETE",
@@ -428,16 +438,16 @@ logoutBtn.addEventListener("click", async (e) => {
   e.preventDefault();
 
   try {
-    const response = await fetch("http://localhost:8000/admin/logout", {
-      method: "POST",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      "https://dravidiancampus.onrender.com/admin/logout",
+      {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+      },
+    );
 
     const data = await response.json();
-
-    console.log(response);
-    console.log(data);
 
     if (!response.ok) {
       resultDirector(ShowError, data.message);
