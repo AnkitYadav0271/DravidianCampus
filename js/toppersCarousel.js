@@ -17,7 +17,7 @@ const dots = dotsContainerToppers.querySelectorAll("div");
 function updateCarouselToppers() {
   cards.forEach((card, index) => {
     const offset = index - currentIndex;
-    console.log("Logging ://", offset);
+    
 
     if (offset === 0) {
       // Central Active Focus

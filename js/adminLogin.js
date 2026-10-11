@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await response.json();
 
         if (response.ok) {
-          console.log("Login successful!", data);
+
           localStorage.setItem("adminToken", data.token);
           window.location.href = "/admin/dashboard.html";
         } else {

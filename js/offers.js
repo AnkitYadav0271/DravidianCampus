@@ -29,10 +29,9 @@ async function loadOffers() {
     const response = await fetch(
       "https://dravidiancampus.onrender.com/admin/offers/images",
     );
-    console.log(response);
+    
     const data = await response.json();
-    console.log(data);
-
+    
     if (!response.ok || !data?.offers || data.offers.length <= 0) {
       offerCorousel.classList.add("hidden");
       return;
