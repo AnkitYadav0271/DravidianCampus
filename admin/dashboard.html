@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-for-a-reason.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/logo-for-a-reason.png" />
+
+    <!-- Apple Touch Icon (For iOS/Safari) -->
+    <link rel="apple-touch-icon" href="/logo-for-a-reason.png" />
     <title>Dravidian Campus Admin</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,13 +41,20 @@
                 </button>
 
                 <button id="galleryBtn"
-                    class="w-full whitespace-nowrap lg:whitespace-normal text-center lg:text-left px-5 py-3 sm:py-4 rounded-2xl bg-white hover:bg-orange-50 font-medium transition shadow">
+                    class="w-full whitespace-nowrap lg:whitespace-normal text-center lg:text-left px-5 py-3 sm:py-4 rounded-2xl bg-white  font-medium transition shadow">
                     Gallery
                 </button>
 
             </nav>
 
-            <div class="p-4 sm:p-5 border-t border-orange-200">
+            <div class="p-4 sm:p-5 border-t border-orange-200 flex flex-col space-y-4 justify-between items-center">
+
+                <a href="/index.html" class="w-full">
+                    <button id="goToHome"
+                        class="w-full py-3 sm:py-4 rounded-2xl bg-red-500 text-white hover:bg-red-600 transition shadow-lg text-sm sm:text-base">
+                        Go to Home
+                    </button>
+                </a>
 
                 <button id="logoutBtn"
                     class="w-full py-3 sm:py-4 rounded-2xl bg-red-500 text-white hover:bg-red-600 transition shadow-lg text-sm sm:text-base">
@@ -92,6 +105,12 @@
                             Upload offers or gallery images instantly.
                         </p>
                     </div>
+
+                    <span
+                        class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full bg-orange-100 text-orange-600 font-medium whitespace-nowrap"
+                        id="selectedImageCount">
+                        0 Images
+                    </span>
 
                     <button
                         class="w-full sm:w-auto px-6 py-3 rounded-xl bg-orange-500 text-white hover:bg-orange-600 transition upload-btn">

@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ otp: otpValue }),
       });
 
-      console.log(response);
+     
       const data = await response.json();
 
       if (response.ok) {
